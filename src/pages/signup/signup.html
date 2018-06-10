@@ -6,9 +6,9 @@
 
 <ion-content padding>
   <div> 
-    <h1>Hello There!</h1>
-    <h3>Welcome back</h3>
-    <h5>Enter your 4 digit PIN</h5>
+    <h1 >Hello There!</h1>
+    <h3>Welcome to <strong>Asterisk</strong></h3>
+    <h5>Set a PIN to secure your details</h5>
   </div>
   <div>
     <ion-item>
@@ -24,10 +24,10 @@
       <ion-input type="tel" placeholder="Phone no"></ion-input>
     </ion-item>
     <ion-item text-center>
-      <button ion-button round block (click)="signUpUser()"> Check In</button>
+      <button ion-button round (click)="signUpUser()"> Check In</button>
     </ion-item>
     <div text-center>
-      <p (click)="loginUser()">Already set the PIN?</p>
+      <p (click)="loginUser()">Already set the PIN? <strong>Login In now!</strong> </p>
     </div>
   </div>
 </ion-content>
