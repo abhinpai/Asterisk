@@ -27,7 +27,7 @@
         </ion-card>
       </ion-col>
       <ion-col col-6>
-        <ion-card>
+        <ion-card (click)="goToCardDetailsPage()">
           <ion-card-header>
             <img src="assets/imgs/icons8-bank-cards-48.png" class="card-icon">
           </ion-card-header>
@@ -40,7 +40,7 @@
     </ion-row>
     <ion-row>
       <ion-col col-6>
-        <ion-card>
+        <ion-card (click)="goToBankDetailsPage()">
           <ion-card-header>
             <img src="assets/imgs/icons8-museum-48.png" class="card-icon">
           </ion-card-header>
@@ -64,7 +64,7 @@
     </ion-row>
     <ion-row>
       <ion-col col-6>
-        <ion-card>
+        <ion-card (click)="goToDocumentsPage()">
           <ion-card-header>
             <img src="assets/imgs/icons8-compose-48.png" class="card-icon">
           </ion-card-header>

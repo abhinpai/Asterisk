@@ -1,10 +1,16 @@
-
 <ion-header no-border>
-
   <ion-navbar transparent>
-    <ion-title>Notes</ion-title>
+    <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>
   </ion-navbar>
-
+  <ion-item>
+    <h1>
+      <strong>Notes</strong>
+    </h1>
+    <p>12 entries found</p>
+    <button color="dark" ion-button item-end icon-only clear (click)="addNotes()">
+      <ion-icon name="add"></ion-icon>
+    </button>
+  </ion-item>
 </ion-header>
 
 

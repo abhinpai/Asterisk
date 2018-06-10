@@ -12,15 +12,27 @@ export class HomePage {
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
-  goToSettingPage(){
+  goToSettingPage() {
     this.navCtrl.push("SettingPage");
   }
 
-  goToPasswordDetailsPage(){
+  goToBankDetailsPage() {
+    this.navCtrl.push("BankDetailsPage")
+  }
+
+  goToCardDetailsPage() {
+    this.navCtrl.push("CardDetailsPage")
+  }
+
+  goToDocumentsPage() {
+    this.navCtrl.push("DocumentsPage")
+  }
+
+  goToPasswordDetailsPage() {
     this.navCtrl.push("PasswordDetailsPage")
   }
 
-  goToNotesDetailsPage(){
+  goToNotesDetailsPage() {
     this.navCtrl.push("NotesDetailsPage")
   }
 }

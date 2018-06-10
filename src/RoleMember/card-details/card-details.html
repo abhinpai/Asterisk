@@ -1,0 +1,54 @@
+<ion-header no-border>
+  <ion-navbar transparent>
+    <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>
+  </ion-navbar>
+  <ion-item>
+    <h1>
+      <strong>Cards</strong>
+    </h1>
+    <p>12 entries found</p>
+    <button color="dark" ion-button item-end icon-only clear (click)="addCard()">
+      <ion-icon name="add"></ion-icon>
+    </button>
+  </ion-item>
+</ion-header>
+
+
+<ion-content>
+
+  <div *isPresent padding text-center class="error-state">
+    <h3> You have not added any card</h3>
+    <p class="error-state-p">Start adding new card details</p>
+    <ion-item text-center>
+      <button class="button-add-pass" ion-button round>Let's start adding</button>
+    </ion-item>
+  </div>
+
+  <div >
+    <ion-card class="card-class" *ngFor="let i of item">
+      <ion-item>
+        <ion-avatar item-start>
+          <img src="https://png.icons8.com/color/1600/museum.png" alt="bank logo">
+        </ion-avatar>
+        <h1 class="bank-name">Bank Name</h1>
+        <ion-note>10:20 AM | Jan 1 2018</ion-note>
+      </ion-item>
+  
+      <div text-center>
+        <p class="card-number">1234 5678 9212 3342</p>
+      </div>
+  
+      <div>
+        <ion-row>
+          <ion-col col-10>
+           <h3 class="card-title">Debit Card</h3>
+          </ion-col>
+          <ion-col>
+            <img src="https://png.icons8.com/color/1600/mastercard-logo.png" alt="provider-logo">
+          </ion-col>
+        </ion-row>
+      </div>
+    </ion-card>
+  </div>
+
+</ion-content>

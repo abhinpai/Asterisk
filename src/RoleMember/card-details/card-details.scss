@@ -1,4 +1,4 @@
-page-notes-details {
+page-card-details {
     .searchbar-md .searchbar-input {
         border-radius: 40px;
     }
@@ -19,5 +19,18 @@ page-notes-details {
     }
     .error-state {
         margin-top: 120px;
+    }
+    .card-class {
+        border-radius: 3%;
+    }
+    .bank-name {
+        font-weight: 800;
+    }
+    .card-number {
+        font-size: 26px;
+    }
+    .card-title {
+        font-size: 20px;
+        margin: 11px;
     }
 }
