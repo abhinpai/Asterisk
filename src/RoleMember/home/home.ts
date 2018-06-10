@@ -19,4 +19,8 @@ export class HomePage {
   goToPasswordDetailsPage(){
     this.navCtrl.push("PasswordDetailsPage")
   }
+
+  goToNotesDetailsPage(){
+    this.navCtrl.push("NotesDetailsPage")
+  }
 }
