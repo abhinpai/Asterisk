@@ -1,38 +1,24 @@
 page-home {
- 
-        
-    .notification-alert{
-            top: 7px;
-            right: 10px;
-            position: absolute;
-            height: 18px;
-            width: 18px;
-            border-radius: 50%;
-                background-color: #f92c2c;
-            border: solid white 3px;
-        }
-
-    
-
-     .card-icon{
+    .card-icon {
         height: 50px;
         width: 50px;
         margin: 10px;
         padding: 3px;
-     }
-
-     .card-title{
+    }
+    .card-title {
         font-size: 14pt;
         font-weight: 800;
-        margin-top: 25px;
-     }
-
-     .card-header-md{
-         padding: 0%;
-     }
-
-     .card-md{
-         border-radius: 5%;
-             height: 110pt;
-     }
+        margin-top: 11px;
+    }
+    .card-header-md {
+        padding: 0%;
+    }
+    .card-md {
+        border-radius: 5%;
+        height: 110pt;
+        
+    }
+    .card-desc {
+        font-size: 11px;
+    }
 }
