@@ -15,4 +15,8 @@ export class HomePage {
   goToSettingPage(){
     this.navCtrl.push("SettingPage");
   }
+
+  goToPasswordDetailsPage(){
+    this.navCtrl.push("PasswordDetailsPage")
+  }
 }

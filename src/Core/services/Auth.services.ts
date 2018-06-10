@@ -1,6 +1,5 @@
 
 import { App } from "ionic-angular";
-import { NavController } from 'ionic-angular';
 import { Injectable } from '@angular/core';
 
 @Injectable()
