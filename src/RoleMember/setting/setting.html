@@ -1,0 +1,42 @@
+<ion-header no-border>
+  <ion-navbar transparent>
+    <ion-title></ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only clear (click)="signout()">
+        <ion-icon name="power"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-item>
+    <ion-avatar item-end>
+      <img src="assets/imgs/ironman.png">
+    </ion-avatar>
+    <h1>Username</h1>
+    <p>Last logged in at 10:10 PM May 8</p>
+  </ion-item>
+
+  <div class="account-div">
+    <ion-item>
+      <ion-icon name="md-call" item-start></ion-icon>
+      <h2>Phone</h2>
+      <p>9874586258</p>
+    </ion-item>
+
+    <ion-item>
+      <ion-icon name="md-mail" item-start></ion-icon>
+      <h2>Email</h2>
+      <p>hello@mail.com</p>
+    </ion-item>
+  </div>
+
+  <div text-center>
+    <button ion-button outline icon-right>
+      Change PIN
+      <ion-icon name="md-keypad"></ion-icon>
+    </button>
+
+  </div>
+</ion-content>

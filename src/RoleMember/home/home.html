@@ -1,14 +1,9 @@
 <ion-header no-border>
   <ion-item no-border>
-    <!-- <button ion-button icon-only clear>
-      <ion-icon name="menu"></ion-icon>
-    </button> -->
     <h1>Hey
       <strong>Username,</strong>
     </h1>
     <ion-avatar item-end>
-      <!-- <img class="user-avatar" src="assets/imgs/ironman.png">
-      <span class="notification-alert"></span> -->
       <user-avatar></user-avatar>
     </ion-avatar>
   </ion-item>
@@ -80,7 +75,7 @@
         </ion-card>
       </ion-col>
       <ion-col col-6>
-        <ion-card>
+        <ion-card (click)="goToSettingPage()">
           <ion-card-header>
             <img src="assets/imgs/icons8-services-48.png" class="card-icon">
           </ion-card-header>
