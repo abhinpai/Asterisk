@@ -19,8 +19,8 @@ export class PasswordDetailsPage {
     public navParams: NavParams) {
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad PasswordDetailsPage');
+  goToViewPasswordPage(){
+    this.navCtrl.push("ViewPasswordPage");
   }
 
   presentActionSheet(){
@@ -53,9 +53,19 @@ export class PasswordDetailsPage {
     this.navCtrl.push("AddPasswordPage");
   }
 
+  viewPassword(){
+    const alert = this.alertCtrl.create({
+      title: 'Your password is',
+      subTitle: 'Password',
+      message: 'Do not share your password with any suspecious person or with anybody!',
+      buttons: ['OK']
+    });
+    alert.present();
+  }
+
 
   editCredetial(){
-
+    this.navCtrl.push("EditPasswordPage");
   }
 
   deleteCredentials(){
