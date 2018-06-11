@@ -1,0 +1,50 @@
+<ion-header no-border>
+  <ion-navbar transparent>
+    <ion-title>Debit Card</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content>
+
+  <ion-card class="card-class">
+    <div (click)="viewCard()">
+      <ion-item>
+        <ion-avatar item-start>
+          <img src="https://png.icons8.com/color/1600/museum.png" alt="bank logo">
+        </ion-avatar>
+        <h1 class="bank-name">Bank Name</h1>
+        <ion-note>10:20 AM | Jan 1 2018</ion-note>
+      </ion-item>
+
+      <div text-center>
+        <p class="card-number">1234 5678 9212 3342</p>
+      </div>
+
+      <div>
+        <ion-row>
+          <ion-col col-10>
+            <h3 class="card-title">12/2018</h3>
+          </ion-col>
+          <ion-col>
+            <img src="https://png.icons8.com/color/1600/mastercard-logo.png" alt="provider-logo">
+          </ion-col>
+        </ion-row>
+      </div>
+    </div>
+  </ion-card>
+
+  <ion-card class="card-backside">
+    <div class="card-strip">
+    </div>
+    <div class="cvv-strip">
+      <p>CVV</p>
+    </div>
+    <h2 class="cvv-number">777</h2>
+  </ion-card>
+
+  <ion-item text-center >
+    <button class="view-pin-btn" ion-button round (click)="viewPIN()">View PIN</button>
+  </ion-item>
+
+</ion-content>

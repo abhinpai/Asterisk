@@ -14,8 +14,9 @@ export class CardDetailsPage {
     public navParams: NavParams) {
   }
 
-  ionViewDidLoad() {
-
+  viewCard(){
+    this.navCtrl.push("ViewCardPage");
+    console.log("Test");
   }
 
 }
