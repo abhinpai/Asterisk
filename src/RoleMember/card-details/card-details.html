@@ -7,7 +7,7 @@
       <strong>Cards</strong>
     </h1>
     <p>12 entries found</p>
-    <button color="dark" ion-button item-end icon-only clear (click)="addCard()">
+    <button color="dark" ion-button item-end icon-only clear (click)="goToaddCardPage()">
       <ion-icon name="add"></ion-icon>
     </button>
   </ion-item>
@@ -25,31 +25,31 @@
   </div>
 
 
-    <ion-card class="card-class" *ngFor="let i of item">
-      <div (click)="viewCard()">
-        <ion-item>
-          <ion-avatar item-start>
-            <img src="https://png.icons8.com/color/1600/museum.png" alt="bank logo">
-          </ion-avatar>
-          <h1 class="bank-name">Bank Name</h1>
-          <ion-note>10:20 AM | Jan 1 2018</ion-note>
-        </ion-item>
+  <ion-card class="card-class" *ngFor="let i of item">
+    <div (click)="viewCard()" (press)="presentActionSheet()">
+      <ion-item>
+        <ion-avatar item-start>
+          <img src="https://png.icons8.com/color/1600/museum.png" alt="bank logo">
+        </ion-avatar>
+        <h1 class="bank-name">Bank Name</h1>
+        <ion-note>10:20 AM | Jan 1 2018</ion-note>
+      </ion-item>
 
-        <div text-center>
-          <p class="card-number">1234 5678 9212 3342</p>
-        </div>
-
-        <div>
-          <ion-row>
-            <ion-col col-10>
-              <h3 class="card-title">Debit Card</h3>
-            </ion-col>
-            <ion-col>
-              <img src="https://png.icons8.com/color/1600/mastercard-logo.png" alt="provider-logo">
-            </ion-col>
-          </ion-row>
-        </div>
+      <div text-center>
+        <p class="card-number">1234 5678 9212 3342</p>
       </div>
-    </ion-card>
+
+      <div>
+        <ion-row>
+          <ion-col col-10>
+            <h3 class="card-title">Debit Card</h3>
+          </ion-col>
+          <ion-col>
+            <img src="https://png.icons8.com/color/1600/mastercard-logo.png" alt="provider-logo">
+          </ion-col>
+        </ion-row>
+      </div>
+    </div>
+  </ion-card>
 
 </ion-content>

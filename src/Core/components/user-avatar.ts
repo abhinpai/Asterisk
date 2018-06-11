@@ -4,7 +4,7 @@ import { NavController } from 'ionic-angular';
 @Component({
     selector: 'user-avatar',
     template: `
-      <img class="user-avatar" src="assets/imgs/ironman.png">
+      <img class="user-avatar" src="https://cdn0.iconfinder.com/data/icons/superhero-2/256/Batman-512.png">
       <span class="notification-alert"></span>`
 })
 
