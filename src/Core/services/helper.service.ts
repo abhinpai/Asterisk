@@ -1,9 +1,9 @@
 
-import { ToastController, LoadingController } from "ionic-angular";
 import { Injectable } from '@angular/core';
+import { ToastController, LoadingController } from 'ionic-angular';
 
 @Injectable()
-export class AuthServiceProvider {
+export class Helper {
 
     public loading: any;
 
