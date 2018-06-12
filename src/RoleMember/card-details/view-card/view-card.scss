@@ -78,4 +78,16 @@ page-view-card {
         margin-left: 88px;
         margin-top: 15px;
     }
+    .phone-no-h2 {
+        margin-top: 15px;
+        margin-left: 19px;
+        font-weight: 550;
+    }
+    .phone-no-p {
+        margin-left: 20px;
+    }
+    .card-md {
+        -webkit-box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 1px 1px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+        box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 1px 1px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+    }
 }

@@ -28,7 +28,7 @@ export class BankDetailsPage {
         {
           text: 'Edit',
           handler: () => {
-            this.editBankDetails();
+            this.goToEditBankPage();
           }
         },
         {
@@ -47,8 +47,12 @@ export class BankDetailsPage {
     actionSheet.present();
   }
 
-  editBankDetails() {
-    this.navCtrl.push("");
+  goToEditBankPage() {
+    this.navCtrl.push("EditBankPage");
+  }
+
+  goToAddBankPage(){
+    this.navCtrl.push("AddBankPage");
   }
 
   deleteBankDetails() {

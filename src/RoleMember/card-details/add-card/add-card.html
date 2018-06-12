@@ -1,6 +1,11 @@
 <ion-header no-border>
   <ion-navbar transparent>
     <ion-title>Add Card</ion-title>
+    <ion-buttons end>
+          <button class="add-card-btn" ion-button icon-only clear (click)="addNewCard()">
+            <ion-icon name="add"></ion-icon>
+          </button>
+    </ion-buttons>
   </ion-navbar>
 </ion-header>
 
@@ -45,6 +50,14 @@
 
   <ion-item>
     <ion-label stacked>
+      Phone No
+    </ion-label>
+    <ion-input type="tel" placeholder="Enter registered mobile no">
+    </ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label stacked>
       PIN
     </ion-label>
     <ion-input type="{{type}}" placeholder="Enter PIN">
@@ -55,8 +68,6 @@
     </button>
   </ion-item>
 
-  <ion-item text-center>
-    <button class="add-card-btn" ion-button round (click)="addNewCard()"> Add Card</button>
-  </ion-item>
+
 
 </ion-content>
