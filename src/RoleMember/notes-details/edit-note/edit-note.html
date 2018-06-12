@@ -1,0 +1,28 @@
+<ion-header no-border>
+  <ion-navbar Transparent>
+    <ion-title>Edit Note</ion-title>
+    <ion-buttons end>
+      <button ion-button clear (click)="saveNote()">
+        Save
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+  <ion-item>
+    <ion-label stacked>
+      Notes Title
+    </ion-label>
+    <ion-input type="text" placeholder="Enter Title">
+    </ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label stacked>
+      Description
+    </ion-label>
+    <ion-textarea type="text" placeholder="Enter description here">
+    </ion-textarea>
+  </ion-item>
+</ion-content>

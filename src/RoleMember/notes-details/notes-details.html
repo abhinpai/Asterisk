@@ -7,7 +7,7 @@
       <strong>Notes</strong>
     </h1>
     <p>12 entries found</p>
-    <button color="dark" ion-button item-end icon-only clear (click)="addNotes()">
+    <button color="dark" ion-button item-end icon-only clear (click)="goToAddNotePage()">
       <ion-icon name="add"></ion-icon>
     </button>
   </ion-item>
@@ -23,18 +23,17 @@
     </ion-item>
   </div>
 
-
-  <div>
-    <ion-card class="card-class" *ngFor="let i of item">
+  <ion-card class="card-class" *ngFor="let i of item">
+    <div (click)="goToViewNotePage()" (press)="presentActionSheet()">
       <ion-item>
         <h1 class="bank-name">Notes title</h1>
         <ion-note>10:20 AM | Jan 1 2018</ion-note>
       </ion-item>
-
       <div padding text-justify>
         <p class="card-number">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae illum nesciunt sed dolor molestias non nemo, dignissimos
           unde! Earum odio nostrum dicta eius ratione quod, quaerat sunt id odit? Eius.</p>
       </div>
-    </ion-card>
-  </div>
+    </div>
+  </ion-card>
+
 </ion-content>
