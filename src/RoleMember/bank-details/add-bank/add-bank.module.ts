@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { IonicPageModule } from 'ionic-angular';
 import { AddBankPage } from './add-bank';
 import { CoreModule } from '../../../Core/core.module';
+import { PhotoViewer } from '@ionic-native/photo-viewer';
 
 @NgModule({
   declarations: [
@@ -12,7 +13,7 @@ import { CoreModule } from '../../../Core/core.module';
     IonicPageModule.forChild(AddBankPage),
   ],
   providers:[
-    
+    PhotoViewer
   ]
 })
 export class AddBankPageModule {}

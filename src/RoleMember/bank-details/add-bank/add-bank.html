@@ -126,10 +126,19 @@
     </ion-item>
 
     <ion-item text-center>
-      <div class="media-class">
-        <img src="{{document_object}}" alt="media">
+
+      <div class="media-class" (click)="viewPhoto()">
+        <span (click)="removePhoto()" class="deleteIcon">
+          <ion-icon name="ios-close-outline"></ion-icon>
+        </span>
+        <img [src]="document_object" *ngIf="document_object" />
       </div>
+
     </ion-item>
   </ion-card>
 
 </ion-content>
+
+<!-- <div class="my-overlay" padding [hidden]="overlayHidden">
+  <button full (click)="hideOverlay()">Click me</button>
+</div> -->
