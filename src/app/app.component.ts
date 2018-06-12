@@ -9,7 +9,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   templateUrl: 'app.html'
 })
 export class MyApp {
-  rootPage:any;
+  rootPage: any;
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
 
@@ -21,15 +21,14 @@ export class MyApp {
     });
   }
 
-  setRoot(){
+  setRoot() {
     if (localStorage.getItem("newUser")) {
-      if(localStorage.getItem("isLoggedIn"))
+      if (localStorage.getItem("isLoggedIn"))
         this.rootPage = "HomePage";
-        else
+      else
         this.rootPage = "LoginPage"
     }
     else {
-
       this.rootPage = "OnboardPage";
     }
 

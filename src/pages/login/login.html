@@ -13,7 +13,7 @@
   <div>
     <ion-item>
       <ion-label stacked>4 Digit PIN</ion-label>
-      <ion-input type="tel" placeholder="1234"></ion-input>
+      <ion-input type="tel" placeholder="1234" [(ngModel)]="pin"></ion-input>
     </ion-item>
     <ion-item text-center>
       <button ion-button round (click)="loginUser()"> Login</button>

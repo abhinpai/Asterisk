@@ -8,7 +8,7 @@ export class AuthServiceProvider {
     constructor(public app: App){}
 
     shutDownUser(){
-        localStorage.clear();
+        localStorage.removeItem("isLoggedIn");
         this.app.getRootNav().setRoot("LoginPage");
     }
 }

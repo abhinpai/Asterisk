@@ -23,7 +23,8 @@ export class OnboardPage {
     public navCtrl: NavController,
     public platform: Platform) {
 
-
+    localStorage.setItem('newUser', 'false');
+    
     this.slides = [
       {
         title: 'Know your Family',
