@@ -16,6 +16,7 @@ export class SettingPage {
   userName: any;
   phone: any;
   email: any;
+  loggedAt: any;
 
   constructor(public navCtrl: NavController,
     public alertCtrl: AlertController,
@@ -33,6 +34,7 @@ export class SettingPage {
     this.userName = localStorage.getItem('UserName');
     this.phone = localStorage.getItem('U-Phone');
     this.email = localStorage.getItem('Email');
+    this.loggedAt = localStorage.getItem("loggedInAt");
   }
 
   signout() {
@@ -257,7 +259,7 @@ export class SettingPage {
   }
 
   deleteProfilePhoto() {
-    localStorage.setItem('ProfilePhoto', 'assets/imgs/default-profilePhoto.png');
+    localStorage.setItem('ProfilePhoto', 'assets/imgs/default-profilePhoto.svg');
     this.profilePhoto = localStorage.getItem('ProfilePhoto');
     this.events.publish('update-profile-photo');
   }

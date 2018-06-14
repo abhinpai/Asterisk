@@ -1,6 +1,7 @@
 
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { PhotoViewer } from '@ionic-native/photo-viewer';
 
 @IonicPage()
 @Component({
@@ -12,7 +13,13 @@ export class HomePage {
   userName: any;
   profilePhoto: any;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, 
+    public photoViewer: PhotoViewer,
+    public navParams: NavParams) {
+  }
+
+  viewProfilePhoto(){
+    this.photoViewer.show(this.profilePhoto);
   }
 
   ionViewWillEnter(){

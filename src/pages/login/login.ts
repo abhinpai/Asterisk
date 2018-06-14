@@ -13,27 +13,36 @@ export class LoginPage {
 
   pin: any;
 
-  constructor(public navCtrl: NavController, 
+
+  constructor(public navCtrl: NavController,
     public helper: Helper,
     public navParams: NavParams) {
   }
 
-  loginUser(){
-    if (this.pin === localStorage.getItem("U-PIN")){
+  loginUser() {
+    if (this.pin.length == 0) {
+      this.helper.presentToast("PIN can not be empty");
+      return;
+    } else if (this.pin.length != 4) {
+      this.helper.presentToast("Please enter valid PIN and try again");
+      return;
+    } else if (this.pin != localStorage.getItem("U-PIN")) {
+      this.helper.presentToast("Invalid Credentails.");
+      return;
+    }
+    else {
       localStorage.setItem("isLoggedIn", "true");
+      localStorage.setItem("loggedInAt", new Date().toISOString());
       this.navCtrl.setRoot("HomePage");
     }
-    else{
-      this.helper.presentToast("Invalid Credentails.");
-    }
-   
+
   }
 
-  signUpUser(){
+  signUpUser() {
     this.navCtrl.setRoot("SignupPage");
   }
 
-  forgetPassword(){
+  forgetPassword() {
     this.navCtrl.push("ResetPasswordPage");
   }
 

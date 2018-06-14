@@ -36,7 +36,6 @@ export class SystemService {
             quality: 75,
             targetWidth: 720,
             targetHeight: 700,
-            correctOrientation: true,
             allowEdit: true,
             encodingType: this.camera.EncodingType.JPEG,
             MediaType: this.camera.MediaType.PICTURE,

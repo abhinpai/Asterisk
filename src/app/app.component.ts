@@ -29,7 +29,7 @@ export class MyApp {
         this.rootPage = "LoginPage"
     }
     else {
-      localStorage.setItem('ProfilePhoto', 'assets/imgs/default-profilePhoto.png');
+      localStorage.setItem('ProfilePhoto', 'assets/imgs/default-profilePhoto.svg');
       localStorage.setItem('UserName', 'Asterisk');
       this.rootPage = "OnboardPage";
     }

@@ -19,7 +19,7 @@
         <ion-icon name="ios-create-outline" (click)="setUsername()"></ion-icon>
       </span>
     </h1>
-    <p>Last logged in at 10:10 PM May 8</p>
+    <p>Logged at {{loggedAt | date}} {{loggedAt | date:'shortTime'}}</p>
   </ion-item>
 
   <div class="account-div">
