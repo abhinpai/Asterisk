@@ -11,10 +11,14 @@
 
 <ion-content padding>
   <ion-item>
-    <ion-avatar item-end>
-      <img src="https://cdn0.iconfinder.com/data/icons/superhero-2/256/Batman-512.png">
+    <ion-avatar item-end (press)="setProfilePhoto()" (click)="viewProfilePhoto()">
+      <img src="{{profilePhoto}}">
     </ion-avatar>
-    <h1>Username</h1>
+    <h1>{{userName}}
+      <span>
+        <ion-icon name="ios-create-outline" (click)="setUsername()"></ion-icon>
+      </span>
+    </h1>
     <p>Last logged in at 10:10 PM May 8</p>
   </ion-item>
 
@@ -22,21 +26,26 @@
     <ion-item>
       <ion-icon name="md-call" item-start></ion-icon>
       <h2>Phone</h2>
-      <p>9874586258</p>
+      <p>{{phone}}</p>
+      <ion-icon name="ios-arrow-dropright" (click)="setPhone()" item-end></ion-icon>
     </ion-item>
 
     <ion-item>
       <ion-icon name="md-mail" item-start></ion-icon>
       <h2>Email</h2>
-      <p>hello@mail.com</p>
+      <p *ngIf="!email" >Set your email address</p>
+      <p *ngIf="email">{{email}}</p>
+      <ion-icon name="ios-arrow-dropright" (click)="setEmail()" item-end></ion-icon>
     </ion-item>
+
+    <hr>
   </div>
 
-  <div text-center>
-    <button ion-button outline icon-right>
-      Change PIN
-      <ion-icon name="md-keypad"></ion-icon>
-    </button>
-
+  <div>
+    <ion-item>
+      <ion-icon name="md-key" item-start></ion-icon>
+      <h3>Do you want to reset your PIN?</h3>
+      <ion-icon name="ios-arrow-dropright" (click)="resetPIN()" item-end></ion-icon>
+    </ion-item>
   </div>
 </ion-content>

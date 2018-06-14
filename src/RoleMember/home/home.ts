@@ -9,7 +9,15 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class HomePage {
 
+  userName: any;
+  profilePhoto: any;
+
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+  }
+
+  ionViewWillEnter(){
+    this.userName = localStorage.getItem('UserName');
+    this.profilePhoto = localStorage.getItem('ProfilePhoto');
   }
 
   goToSettingPage() {

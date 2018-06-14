@@ -1,10 +1,10 @@
 <ion-header no-border>
   <ion-item no-border>
     <h1>Hey
-      <strong>Username,</strong>
+      <strong *ngIf="userName != 'Asterisk'">{{userName}},</strong>
     </h1>
     <ion-avatar item-end>
-      <user-avatar></user-avatar>
+    <img src="{{profilePhoto}}">
     </ion-avatar>
   </ion-item>
 </ion-header>

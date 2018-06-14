@@ -23,7 +23,7 @@ export class OnboardPage {
     public navCtrl: NavController,
     public platform: Platform) {
 
-    localStorage.setItem('newUser', 'false');
+    localStorage.setItem('newUser', 'true');
     
     this.slides = [
       {

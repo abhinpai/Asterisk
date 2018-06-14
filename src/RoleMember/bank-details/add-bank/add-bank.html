@@ -127,11 +127,11 @@
 
     <ion-item text-center>
 
-      <div class="media-class" (click)="viewPhoto()">
+      <div class="media-class" >
         <span (click)="removePhoto()" class="deleteIcon">
           <ion-icon name="ios-close-outline"></ion-icon>
         </span>
-        <img [src]="document_object" *ngIf="document_object" />
+        <img (click)="viewPhoto()" [src]="document_object" *ngIf="document_object" />
       </div>
 
     </ion-item>
