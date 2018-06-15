@@ -11,7 +11,9 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 export class MyApp {
   rootPage: any;
 
-  constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
+  constructor(platform: Platform, 
+    statusBar: StatusBar, 
+    splashScreen: SplashScreen) {
 
     this.setRoot();
 
@@ -20,6 +22,7 @@ export class MyApp {
       splashScreen.hide();
     });
   }
+
 
   setRoot() {
     if (localStorage.getItem("newUser")) {

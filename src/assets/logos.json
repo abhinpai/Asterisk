@@ -1,0 +1,524 @@
+[
+    {
+        "id": 1,
+        "name": "amazon",
+        "subname": "Amazon",
+        "path": "assets/imgs/logos/svg/amazon.svg"
+    },
+    {
+        "id": 2,
+        "name": "bebo",
+        "subname": "BB",
+        "path": "assets/imgs/logos/svg/bebo.svg"
+    },
+    {
+        "id": 3,
+        "name": "behance",
+        "subname": "be",
+        "path": "assets/imgs/logos/svg/behance.svg"
+    },
+    {
+        "id": 4,
+        "name": "bing",
+        "subname": "Bing",
+        "path": "assets/imgs/logos/svg/bing.svg"
+    },
+    {
+        "id": 5,
+        "name": "blogger",
+        "subname": "blog",
+        "path": "assets/imgs/logos/svg/blogger.svg"
+    },
+    {
+        "id": 6,
+        "name": "box",
+        "subname": "Box",
+        "path": "assets/imgs/logos/svg/box.svg"
+    },
+    {
+        "id": 7,
+        "name": "brand",
+        "subname": "brand",
+        "path": "assets/imgs/logos/svg/brand.svg"
+    },
+    {
+        "id": 8,
+        "name": "deviantart",
+        "subname": "dev",
+        "path": "assets/imgs/logos/svg/deviantart.svg"
+    },
+    {
+        "id": 9,
+        "name": "dig",
+        "subname": "dig",
+        "path": "assets/imgs/logos/svg/dig.svg"
+    },
+    {
+        "id": 10,
+        "name": "disqus",
+        "subname": "disqus",
+        "path": "assets/imgs/logos/svg/disqus.svg"
+    },
+    {
+        "id": 11,
+        "name": "dribbble",
+        "subname": "rippple",
+        "path": "assets/imgs/logos/svg/dribbble.svg"
+    },
+    {
+        "id": 12,
+        "name": "dropbox",
+        "subname": "dropbox",
+        "path": "assets/imgs/logos/svg/dropbox.svg"
+    },
+    {
+        "id": 13,
+        "name": "envato",
+        "subname": "envato",
+        "path": "assets/imgs/logos/svg/envato.svg"
+    },
+    {
+        "id": 14,
+        "name": "etsy",
+        "subname": "etsy",
+        "path": "assets/imgs/logos/svg/etsy.svg"
+    },
+    {
+        "id": 15,
+        "name": "facebook",
+        "subname": "fb",
+        "path": "assets/imgs/logos/svg/facebook.svg"
+    },
+    {
+        "id": 16,
+        "name": "flickr",
+        "subname": "flickr",
+        "path": "assets/imgs/logos/svg/flickr.svg"
+    },
+    {
+        "id": 17,
+        "name": "forrst",
+        "subname": "forrst",
+        "path": "assets/imgs/logos/svg/forrst.svg"
+    },
+    {
+        "id": 18,
+        "name": "foursquare",
+        "subname": "fs",
+        "path": "assets/imgs/logos/svg/foursquare.svg"
+    },
+    {
+        "id": 19,
+        "name": "github",
+        "subname": "github",
+        "path": "assets/imgs/logos/svg/github.svg"
+    },
+    {
+        "id": 20,
+        "name": "google",
+        "subname": "gmail",
+        "path": "assets/imgs/logos/svg/google.svg"
+    },
+    {
+        "id": 21,
+        "name": "googleplus",
+        "subname": "gp",
+        "path": "assets/imgs/logos/svg/googleplus.svg"
+    },
+    {
+        "id": 22,
+        "name": "instagram",
+        "subname": "insta",
+        "path": "assets/imgs/logos/svg/instagram.svg"
+    },
+    {
+        "id": 24,
+        "name": "lastfm",
+        "subname": "lastfm",
+        "path": "assets/imgs/logos/svg/lastfm.svg"
+    },
+    {
+        "id": 25,
+        "name": "line",
+        "subname": "line",
+        "path": "assets/imgs/logos/svg/line.svg"
+    },
+    {
+        "id": 26,
+        "name": "linkedin",
+        "subname": "in",
+        "path": "assets/imgs/logos/svg/linkedin.svg"
+    },
+    {
+        "id": 27,
+        "name": "medium",
+        "subname": "medium",
+        "path": "assets/imgs/logos/svg/medium.svg"
+    },
+    {
+        "id": 28,
+        "name": "messenger",
+        "subname": "messenger",
+        "path": "assets/imgs/logos/svg/messenger.svg"
+    },
+    {
+        "id": 29,
+        "name": "myspace",
+        "subname": "myspace",
+        "path": "assets/imgs/logos/svg/myspace.svg"
+    },
+    {
+        "id": 30,
+        "name": "network",
+        "subname": "network",
+        "path": "assets/imgs/logos/svg/network.svg"
+    },
+    {
+        "id": 31,
+        "name": "opera",
+        "subname": "operamini",
+        "path": "assets/imgs/logos/svg/opera.svg"
+    },
+    {
+        "id": 32,
+        "name": "path",
+        "subname": "path",
+        "path": "assets/imgs/logos/svg/path.svg"
+    },
+    {
+        "id": 33,
+        "name": "paypal",
+        "subname": "pp",
+        "path": "assets/imgs/logos/svg/paypal.svg"
+    },
+    {
+        "id": 34,
+        "name": "pinterest",
+        "subname": "pinterest",
+        "path": "assets/imgs/logos/svg/pinterest.svg"
+    },
+    {
+        "id": 35,
+        "name": "plurk",
+        "subname": "plurk",
+        "path": "assets/imgs/logos/svg/plurk.svg"
+    },
+    {
+        "id": 36,
+        "name": "powerpoint",
+        "subname": "ppt",
+        "path": "assets/imgs/logos/svg/powerpoint.svg"
+    },
+    {
+        "id": 37,
+        "name": "prime",
+        "subname": "amazonprime",
+        "path": "assets/imgs/logos/svg/prime.svg"
+    },
+    {
+        "id": 38,
+        "name": "quora",
+        "subname": "quora",
+        "path": "assets/imgs/logos/svg/quora.svg"
+    },
+    {
+        "id": 39,
+        "name": "reddit",
+        "subname": "reddit",
+        "path": "assets/imgs/logos/svg/reddit.svg"
+    },
+    {
+        "id": 40,
+        "name": "rss",
+        "subname": "rssfeed",
+        "path": "assets/imgs/logos/svg/rss.svg"
+    },
+    {
+        "id": 41,
+        "name": "share",
+        "subname": "share",
+        "path": "assets/imgs/logos/svg/share.svg"
+    },
+    {
+        "id": 42,
+        "name": "skype",
+        "subname": "skype",
+        "path": "assets/imgs/logos/svg/skype.svg"
+    },
+    {
+        "id": 43,
+        "name": "snapchat",
+        "subname": "snap",
+        "path": "assets/imgs/logos/svg/snapchat.svg"
+    },
+    {
+        "id": 44,
+        "name": "soundcloud",
+        "subname": "soundcloud",
+        "path": "assets/imgs/logos/svg/soundcloud.svg"
+    },
+    {
+        "id": 45,
+        "name": "spotify",
+        "subname": "spotify",
+        "path": "assets/imgs/logos/svg/spotify.svg"
+    },
+    {
+        "id": 46,
+        "name": "swarm",
+        "subname": "swarm",
+        "path": "assets/imgs/logos/svg/swarm.svg"
+    },
+    {
+        "id": 47,
+        "name": "telegram",
+        "subname": "telegram",
+        "path": "assets/imgs/logos/svg/telegram.svg"
+    },
+    {
+        "id": 48,
+        "name": "trello",
+        "subname": "trello",
+        "path": "assets/imgs/logos/svg/trello.svg"
+    },
+    {
+        "id": 49,
+        "name": "tumblr",
+        "subname": "tumblr",
+        "path": "assets/imgs/logos/svg/tumblr.svg"
+    },
+    {
+        "id": 50,
+        "name": "twitter",
+        "subname": "twit",
+        "path": "assets/imgs/logos/svg/twitter.svg"
+    },
+    {
+        "id": 51,
+        "name": "viber",
+        "subname": "viber",
+        "path": "assets/imgs/logos/svg/viber.svg"
+    },
+    {
+        "id": 52,
+        "name": "vimeo",
+        "subname": "vimeo",
+        "path": "assets/imgs/logos/svg/vimeo.svg"
+    },
+    {
+        "id": 53,
+        "name": "vine",
+        "subname": "vine",
+        "path": "assets/imgs/logos/svg/vine.svg"
+    },
+    {
+        "id": 54,
+        "name": "vk",
+        "subname": "vk",
+        "path": "assets/imgs/logos/svg/vk.svg"
+    },
+    {
+        "id": 55,
+        "name": "whatsapp",
+        "subname": "whatsapp",
+        "path": "assets/imgs/logos/svg/whatsapp.svg"
+    },
+    {
+        "id": 56,
+        "name": "wordpress",
+        "subname": "wp",
+        "path": "assets/imgs/logos/svg/wordpress.svg"
+    },
+    {
+        "id": 57,
+        "name": "xing",
+        "subname": "xing",
+        "path": "assets/imgs/logos/svg/xing.svg"
+    },
+    {
+        "id": 58,
+        "name": "yahoo",
+        "subname": "yahoomessenger",
+        "path": "assets/imgs/logos/svg/yahoo.svg"
+    },
+    {
+        "id": 59,
+        "name": "youtube",
+        "subname": "youtube",
+        "path": "assets/imgs/logos/svg/youtube.svg"
+    },
+    {
+        "id": 60,
+        "name": "aws",
+        "subname": "amazonwebservice",
+        "path": "assets/imgs/logos/png/aws.png"
+    },
+    {
+        "id": 61,
+        "name": "bitbucket",
+        "subname": "artisan",
+        "path": "assets/imgs/logos/png/bitbucket.png"
+    },
+    {
+        "id": 62,
+        "name": "codechef",
+        "subname": "codechef",
+        "path": "assets/imgs/logos/png/codechef.png"
+    },
+    {
+        "id": 63,
+        "name": "codemonk",
+        "subname": "codemonk",
+        "path": "assets/imgs/logos/png/codemonk.png"
+    },
+    {
+        "id": 64,
+        "name": "digitalocean",
+        "subname": "digitalocean",
+        "path": "assets/imgs/logos/png/digitalocean.png"
+    },
+    {
+        "id": 65,
+        "name": "edx",
+        "subname": "EdX",
+        "path": "assets/imgs/logos/png/edx.png"
+    },
+    {
+        "id": 66,
+        "name": "flipkart",
+        "subname": "flipkart",
+        "path": "assets/imgs/logos/png/flipkart.png"
+    },
+    {
+        "id": 67,
+        "name": "geeksforgeeks",
+        "subname": "gfg",
+        "path": "assets/imgs/logos/png/geeksforgeeks.png"
+    },
+    {
+        "id": 68,
+        "name": "godaddy",
+        "subname": "godaddy",
+        "path": "assets/imgs/logos/png/godaddy.png"
+    },
+    {
+        "id": 69,
+        "name": "hackerearth",
+        "subname": "hackerearth",
+        "path": "assets/imgs/logos/png/hackerearth.png"
+    },
+    {
+        "id": 70,
+        "name": "heroku",
+        "subname": "heroku",
+        "path": "assets/imgs/logos/png/heroku.png"
+    },
+    {
+        "id": 71,
+        "name": "leetcode",
+        "subname": "leetcode",
+        "path": "assets/imgs/logos/png/leetcode.png"
+    },
+    {
+        "id": 72,
+        "name": "msoffice",
+        "subname": "office",
+        "path": "assets/imgs/logos/png/msoffice.png"
+    },
+    {
+        "id": 73,
+        "name": "netflix",
+        "subname": "netflix",
+        "path": "assets/imgs/logos/png/netflix.png"
+    },
+    {
+        "id": 74,
+        "name": "paytm",
+        "subname": "paytm",
+        "path": "assets/imgs/logos/png/paytm.png"
+    },
+    {
+        "id": 75,
+        "name": "snapdeal",
+        "subname": "sd",
+        "path": "assets/imgs/logos/png/snapdeal.png"
+    },
+    {
+        "id": 76,
+        "name": "stackoverflow",
+        "subname": "stackoverflow",
+        "path": "assets/imgs/logos/png/stackoverflow.png"
+    },
+    {
+        "id": 77,
+        "name": "uber",
+        "subname": "ubercab",
+        "path": "assets/imgs/logos/png/uber.png"
+    },
+    {
+        "id": 78,
+        "name": "udacity",
+        "subname": "udacity",
+        "path": "assets/imgs/logos/png/udacity.png"
+    },
+    {
+        "id": 79,
+        "name": "udemy",
+        "subname": "udemy",
+        "path": "assets/imgs/logos/png/udemy.png"
+    },
+    {
+        "id": 80,
+        "name": "jio",
+        "subname": "jio",
+        "path": "assets/imgs/logos/png/jio.png"
+    },
+    {
+        "id": 81,
+        "name": "coursera",
+        "subname": "coursera",
+        "path": "assets/imgs/logos/png/coursera.png"
+    },
+    {
+        "id": 82,
+        "name": "xiaomi",
+        "subname": "mi",
+        "path": "assets/imgs/logos/png/xiaomi.png"
+    },
+    {
+        "id": 83,
+        "name": "hackerrank",
+        "subname": "hackerrank",
+        "path": "assets/imgs/logos/png/hackerrank.png"
+    },
+    {
+        "id": 84,
+        "name": "bookmyshow",
+        "subname": "bookmyshow",
+        "path": "assets/imgs/logos/jpg/bookmyshow.jpg"
+    },
+    {
+        "id": 85,
+        "name": "freelancer",
+        "subname": "freelancer",
+        "path": "assets/imgs/logos/jpg/freelancer.jpg"
+    },
+    {
+        "id": 86,
+        "name": "myntra",
+        "subname": "myntrashopping",
+        "path": "assets/imgs/logos/jpg/myntra.jpg"
+    },
+    {
+        "id": 87,
+        "name": "ola",
+        "subname": "olacab",
+        "path": "assets/imgs/logos/jpg/ola.jpg"
+    },
+    {
+        "id": 88,
+        "name": "workday",
+        "subname": "workday",
+        "path": "assets/imgs/logos/jpg/workday.jpg"
+    }
+]
