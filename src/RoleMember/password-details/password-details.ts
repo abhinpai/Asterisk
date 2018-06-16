@@ -2,6 +2,7 @@
 import { PasswordDBServiceProvider } from './services/password-db.service';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, ActionSheetController, AlertController } from 'ionic-angular';
+import { Helper } from '../../Core/services/helper.service';
 
 @IonicPage()
 @Component({
@@ -17,10 +18,15 @@ export class PasswordDetailsPage {
   constructor(public navCtrl: NavController,
     public actionCtrl: ActionSheetController,
     public alertCtrl: AlertController,
+    public helper: Helper,
     public passDBService: PasswordDBServiceProvider,
     public navParams: NavParams) { }
 
   ionViewWillEnter() {
+   this.initialize();
+  }
+
+  initialize(){
     this.passDBService.retrievePassword()
       .then(res => {
         this.passwordData = res;
@@ -36,20 +42,20 @@ export class PasswordDetailsPage {
     this.navCtrl.push("ViewPasswordPage", data);
   }
 
-  presentActionSheet() {
+  presentActionSheet(id, data) {
     let actionSheet = this.actionCtrl.create({
       title: 'Manipulate credential',
       buttons: [
         {
           text: 'Edit',
           handler: () => {
-            this.editCredetial();
+            this.editCredetial(data);
           }
         },
         {
           text: 'Delete',
           handler: () => {
-            this.deleteCredentials();
+            this.deleteCredentials(id);
           }
         },
         {
@@ -76,11 +82,11 @@ export class PasswordDetailsPage {
     alert.present();
   }
 
-  editCredetial() {
-    this.navCtrl.push("EditPasswordPage");
+  editCredetial(data) {
+    this.navCtrl.push("EditPasswordPage", data);
   }
 
-  deleteCredentials() {
+  deleteCredentials(id) {
     const confirm = this.alertCtrl.create({
       title: 'Delete Credentials',
       message: 'Are you sure you want to delete?',
@@ -94,7 +100,11 @@ export class PasswordDetailsPage {
         {
           text: 'Yes, Delete',
           handler: () => {
-
+            this.passDBService.deletePassword(id)
+            .then(res =>{
+              this.initialize();
+              this.helper.presentToast("Password has been deleted successfully");
+            }).catch(e => console.log(e));
           }
         }
       ]

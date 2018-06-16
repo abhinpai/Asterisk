@@ -33,7 +33,7 @@ export class AddPasswordPage {
   constructor(public navCtrl: NavController,
     public http: HttpClient,
     public helper: Helper,
-    public zone: NgZone, 
+    public zone: NgZone,
     public passDBService: PasswordDBServiceProvider,
     public navParams: NavParams) {
   }
@@ -49,11 +49,6 @@ export class AddPasswordPage {
 
   }
 
-  resetLogo() {
-    this.passwordData.logo = localStorage.getItem('ErrorPhoto');
-    this.passwordData.logo_id = 0;
-  }
-
   showPin() {
     if (this.visible) {
       this.visible = false;
@@ -62,6 +57,11 @@ export class AddPasswordPage {
       this.visible = true;
       this.type = "text"
     }
+  }
+
+  resetLogo() {
+    this.passwordData.logo = localStorage.getItem('ErrorPhoto');
+    this.passwordData.logo_id = 0;
   }
 
 
@@ -82,7 +82,7 @@ export class AddPasswordPage {
     this.passwordData.created_at = new Date().toISOString();
     this.passwordData.updated_at = new Date().toISOString();
 
-    if(this.passwordData.provider.length == 0){
+    if (this.passwordData.provider.length == 0) {
       this.helper.presentToast("Please enter Provider Name");
       return;
     }
@@ -92,7 +92,7 @@ export class AddPasswordPage {
       return;
     }
 
-    if (this.passwordData.username.length > 15) {
+    if (this.passwordData.username.length > 30) {
       this.helper.presentToast("The Username length can't excede more than 15 character");
       return;
     }
@@ -112,7 +112,7 @@ export class AddPasswordPage {
       return;
     }
 
-    if (this.passwordData.password.length > 15) {
+    if (this.passwordData.password.length > 30) {
       this.helper.presentToast("The password length can't excede more than 15 character");
       return;
     }
@@ -120,10 +120,10 @@ export class AddPasswordPage {
     console.log(this.passwordData);
 
     this.passDBService.addPassword(this.passwordData)
-    .then(()=>{
-      this.helper.presentToast("Password successfully added");
-      this.navCtrl.pop();
-    }).catch(error => this.helper.presentToast(error));
+      .then(() => {
+        this.helper.presentToast("Password successfully added");
+        this.navCtrl.pop();
+      }).catch(error => this.helper.presentToast(error));
 
   }
 
@@ -164,10 +164,10 @@ export class AddPasswordPage {
   checkPassStrength(ev: any) {
     let pass = ev.value;
     console.log(pass);
-    
+
     var score = this.scorePassword(pass);
 
-    this.zone.run(() =>{
+    this.zone.run(() => {
       if (score > 80)
         this.passwordData.strength = "strong";
       if (score > 60)
@@ -175,7 +175,7 @@ export class AddPasswordPage {
       if (score >= 30)
         this.passwordData.strength = "weak";
     })
-    
+
     return "";
   }
 
