@@ -7,6 +7,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { MyApp } from './app.component';
 import { SQLite } from '@ionic-native/sqlite';
 import { HttpClientModule } from '@angular/common/http';
+import { DatabaseServiceProvider } from '../Core/services/database.service';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { HttpClientModule } from '@angular/common/http';
     StatusBar,
     SplashScreen,
     { provide: ErrorHandler, useClass: IonicErrorHandler },
-    SQLite
+    SQLite,
+    DatabaseServiceProvider
   ]
 })
 export class AppModule { }

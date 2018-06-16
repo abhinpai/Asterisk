@@ -1,4 +1,5 @@
 
+import { PasswordDBServiceProvider } from './services/password-db.service';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, ActionSheetController, AlertController } from 'ionic-angular';
 
@@ -10,32 +11,44 @@ import { IonicPage, NavController, NavParams, ActionSheetController, AlertContro
 export class PasswordDetailsPage {
 
   isPresent: boolean;
+  passwordData: any;
+  logo: any;
 
-  item = [1,2,3,4,5];
-
-  constructor(public navCtrl: NavController, 
+  constructor(public navCtrl: NavController,
     public actionCtrl: ActionSheetController,
     public alertCtrl: AlertController,
+    public passDBService: PasswordDBServiceProvider,
     public navParams: NavParams) {
   }
 
-  goToViewPasswordPage(){
+  ionViewWillEnter() {
+    this.passDBService.retrievePassword()
+      .then(res => {
+        this.passwordData = res;
+        if (this.passwordData.length == 0)
+          this.isPresent = false;
+        else
+          this.isPresent = true;
+      });
+  }
+
+  goToViewPasswordPage() {
     this.navCtrl.push("ViewPasswordPage");
   }
 
-  presentActionSheet(){
+  presentActionSheet() {
     let actionSheet = this.actionCtrl.create({
       title: 'Manipulate credential',
-      buttons:[
+      buttons: [
         {
           text: 'Edit',
-          handler: () =>{
+          handler: () => {
             this.editCredetial();
           }
         },
         {
           text: 'Delete',
-          handler: () =>{
+          handler: () => {
             this.deleteCredentials();
           }
         },
@@ -53,7 +66,7 @@ export class PasswordDetailsPage {
     this.navCtrl.push("AddPasswordPage");
   }
 
-  viewPassword(){
+  viewPassword() {
     const alert = this.alertCtrl.create({
       title: 'Your password is',
       subTitle: 'Password',
@@ -64,11 +77,11 @@ export class PasswordDetailsPage {
   }
 
 
-  editCredetial(){
+  editCredetial() {
     this.navCtrl.push("EditPasswordPage");
   }
 
-  deleteCredentials(){
+  deleteCredentials() {
     const confirm = this.alertCtrl.create({
       title: 'Delete Credentials',
       message: 'Are you sure you want to delete?',
@@ -82,7 +95,7 @@ export class PasswordDetailsPage {
         {
           text: 'Yes, Delete',
           handler: () => {
-            
+
           }
         }
       ]

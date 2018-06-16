@@ -1,8 +1,10 @@
+import { DatabaseServiceProvider } from './../Core/services/database.service';
 
 import { Component } from '@angular/core';
 import { Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+
 
 
 @Component({
@@ -13,6 +15,7 @@ export class MyApp {
 
   constructor(platform: Platform, 
     statusBar: StatusBar, 
+    public dbService: DatabaseServiceProvider,
     splashScreen: SplashScreen) {
 
     this.setRoot();

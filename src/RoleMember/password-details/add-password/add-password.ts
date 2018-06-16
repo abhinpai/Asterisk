@@ -1,3 +1,4 @@
+import { PasswordDBServiceProvider } from './../services/password-db.service';
 import { Helper } from './../../../Core/services/helper.service';
 import { HttpClient } from '@angular/common/http';
 import { Component, NgZone } from '@angular/core';
@@ -33,6 +34,7 @@ export class AddPasswordPage {
     public http: HttpClient,
     public helper: Helper,
     public zone: NgZone, 
+    public passDBService: PasswordDBServiceProvider,
     public navParams: NavParams) {
   }
 
@@ -68,7 +70,7 @@ export class AddPasswordPage {
     const val = ev.value;
 
     for (let i = 0; i < this.provider_logos.length; i++) {
-      if (this.provider_logos[i].name == val || this.provider_logos[i].subname == val) {
+      if (this.provider_logos[i].name.toLowerCase() == val.toLowerCase() || this.provider_logos[i].subname.toLowerCase() == val.toLowerCase()) {
         this.passwordData.logo = this.provider_logos[i].path;
         this.passwordData.logo_id = this.provider_logos[i].id;
       }
@@ -78,7 +80,7 @@ export class AddPasswordPage {
   addNewPassword() {
 
     this.passwordData.created_at = new Date().toISOString();
-    this.passwordData.updated_at = null;
+    this.passwordData.updated_at = new Date().toISOString();
 
     if(this.passwordData.provider.length == 0){
       this.helper.presentToast("Please enter Provider Name");
@@ -116,6 +118,12 @@ export class AddPasswordPage {
     }
 
     console.log(this.passwordData);
+
+    this.passDBService.addPassword(this.passwordData)
+    .then(()=>{
+      this.helper.presentToast("Password successfully added");
+      this.navCtrl.pop();
+    }).catch(error => this.helper.presentToast(error));
 
   }
 
