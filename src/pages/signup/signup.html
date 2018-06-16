@@ -13,15 +13,15 @@
   <div>
     <ion-item>
       <ion-label stacked>4 Digit PIN</ion-label>
-      <ion-input type="tel" placeholder="1234"></ion-input>
+      <ion-input type="tel" placeholder="1234" [(ngModel)]="sigupData.pin"></ion-input>
     </ion-item>
     <ion-item>
       <ion-label stacked>Confirm PIN</ion-label>
-      <ion-input type="tel" placeholder="1234"></ion-input>
+      <ion-input type="tel" placeholder="1234" [(ngModel)]="sigupData.cpin"></ion-input>
     </ion-item>
     <ion-item>
       <ion-label stacked>Phone No</ion-label>
-      <ion-input type="tel" placeholder="Phone no"></ion-input>
+      <ion-input type="tel" placeholder="Phone no" [(ngModel)]="sigupData.phone"></ion-input>
     </ion-item>
     <ion-item text-center>
       <button ion-button round (click)="signUpUser()"> Check In</button>

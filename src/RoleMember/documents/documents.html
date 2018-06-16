@@ -1,8 +1,9 @@
 <ion-header no-border>
   <ion-navbar transparent>
-    <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>
+    <!-- <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar> -->
+    <ion-title>Documents</ion-title>
   </ion-navbar>
-  <ion-item>
+  <!-- <ion-item>
     <h1>
       <strong>Documents</strong>
     </h1>
@@ -10,17 +11,18 @@
     <button color="dark" ion-button item-end icon-only clear (click)="addDocument()">
       <ion-icon name="add"></ion-icon>
     </button>
-  </ion-item>
+  </ion-item> -->
 </ion-header>
 
 
 <ion-content padding>
 
-    <div *isPresent padding text-center class="error-state">
-      <h3> You have not added any documents</h3>
-      <p class="error-state-p">Start adding new documents</p>
-      <ion-item text-center>
+  <div padding text-center class="error-state">
+    <img src="../assets/imgs/time-final.gif" alt="">
+    <h3> Comming Soon!</h3>
+    <p class="error-state-p">This feature is under development.</p>
+    <!-- <ion-item text-center>
         <button class="button-add-pass" ion-button round>Let's start adding</button>
-      </ion-item>
-    </div>
+      </ion-item> -->
+  </div>
 </ion-content>

@@ -1,0 +1,29 @@
+page-edit-bank {
+    .time-stamp {
+        margin-top: -21px;
+        margin-left: 62px;
+        background: transparent;
+    }
+    .main-head-h2 {
+        font-size: 19px;
+        font-weight: 500;
+    }
+    .card-md {
+        border-radius: 3%;
+        -webkit-box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 1px 1px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+        box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 1px 1px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+    }
+    .account-card {
+        height: 370px;
+    }
+    .bank-card {
+        height: 388px;
+    }
+    .card-title {
+        border-bottom: #8f8d8d solid 1px;
+        h1 {
+            font-size: 20px;
+            font-weight: 600;
+        }
+    }
+}

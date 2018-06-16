@@ -1,0 +1,93 @@
+page-view-card {
+    .searchbar-md .searchbar-input {
+        border-radius: 40px;
+    }
+    .button-add-pass {
+        background: linear-gradient(to bottom right, #5c2774, #335cc5, #637ffd);
+        width: 150px;
+    }
+    .item-md .item-button {
+        height: 37px;
+    }
+    .error-state-p {
+        margin-top: -8px;
+    }
+    .item-md h2 {
+        font-size: 1.8rem;
+        font-weight: 500;
+        margin-bottom: 2px;
+    }
+    .error-state {
+        margin-top: 120px;
+    }
+    .card-class {
+        border-radius: 3%;
+    }
+    .bank-name {
+        font-weight: 800;
+    }
+    .card-number {
+        font-size: 22px;
+        margin-top: 11px;
+    }
+    .row {
+        margin-top: 20px;
+    }
+    .card-title {
+        font-weight: 500;
+        font-size: 20px;
+        margin: 11px;
+    }
+    .card-backside {
+        height: 194px;
+        border-radius: 3%;
+    }
+    .card-strip {
+        background-color: #242424;
+        height: 29px;
+        margin-top: 43px;
+    }
+    .cvv-strip {
+        margin-top: 22px;
+        height: 29px;
+        background: #eaeaea;
+        width: 190px;
+        margin-left: 20px;
+        p {
+            font-size: 18px;
+            font-weight: 500;
+            /* display: inline; */
+            margin-left: 140px;
+        }
+    }
+    .cvv-number {
+        margin-top: -24px;
+        margin-left: 215px;
+        font-size: 18px;
+        font-weight: 500;
+    }
+    .view-pin-btn {
+        background: linear-gradient(to bottom right, #5c2774, #335cc5, #637ffd);
+        width: 130px;
+        .button-inner {
+            font-size: 17px;
+        }
+    }
+    .alert-md .alert-sub-title {
+        font-size: 22px;
+        margin-left: 88px;
+        margin-top: 15px;
+    }
+    .phone-no-h2 {
+        margin-top: 15px;
+        margin-left: 19px;
+        font-weight: 550;
+    }
+    .phone-no-p {
+        margin-left: 20px;
+    }
+    .card-md {
+        -webkit-box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 1px 1px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+        box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 1px 1px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+    }
+}

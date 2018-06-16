@@ -1,10 +1,10 @@
 <ion-header no-border>
   <ion-item no-border>
     <h1>Hey
-      <strong>Username,</strong>
+      <strong *ngIf="userName != 'Asterisk'">{{userName}},</strong>
     </h1>
-    <ion-avatar item-end>
-      <user-avatar></user-avatar>
+    <ion-avatar item-end (click)="viewProfilePhoto()">
+      <img src="{{profilePhoto}}">
     </ion-avatar>
   </ion-item>
 </ion-header>
@@ -15,7 +15,7 @@
   </div>
   <ion-grid>
     <ion-row>
-      <ion-col col-6>
+      <ion-col col-6 text-center>
         <ion-card (click)="goToPasswordDetailsPage()">
           <ion-card-header>
             <img src="assets/imgs/icons8-show-password-48.png" class="card-icon">

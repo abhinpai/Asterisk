@@ -1,18 +1,25 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController, Events } from 'ionic-angular';
 
 @Component({
     selector: 'user-avatar',
     template: `
-      <img class="user-avatar" src="assets/imgs/ironman.png">
-      <span class="notification-alert"></span>`
+      <img class="user-avatar"  src="{{profilePhoto}}">
+      <span *isPresentNotification class="notification-alert"></span>`
 })
 
 export class UserAvatarComponent {
-   
+
     isPresent: boolean;
 
-    constructor(public navCtrl: NavController) {}
+    profilePhoto: any = localStorage.getItem('ProfilePhoto');
 
-    checkNotification(){}
+    constructor(public navCtrl: NavController,
+    public events: Events) { 
+        
+        this.events.subscribe('update-profile-photo', data =>{
+            this.profilePhoto = localStorage.getItem('ProfilePhoto');
+        });
+    }
+
 }

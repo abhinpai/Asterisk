@@ -1,0 +1,73 @@
+<ion-header no-border>
+  <ion-navbar transparent>
+    <ion-title>Add Card</ion-title>
+    <ion-buttons end>
+          <button class="add-card-btn" ion-button icon-only clear (click)="addNewCard()">
+            <ion-icon name="add"></ion-icon>
+          </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+
+  <ion-item>
+    <ion-avatar item-start>
+      <img src="https://png.icons8.com/flat_round/1600/error.png" alt="provider">
+    </ion-avatar>
+    <ion-input type="text" placeholder="Enter bank name"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label stacked>
+      Card No
+    </ion-label>
+    <ion-input type="tel" placeholder="Enter 16 Digit Card No">
+    </ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label stacked>
+      Email
+    </ion-label>
+    <ion-input type="email" placeholder="xyz@mail.com">
+    </ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Expire Date</ion-label>
+    <ion-datetime displayFormat="MM/YYYY" pickerFormat="MMMM YYYY" [(ngModel)]="today"></ion-datetime>
+  </ion-item>
+
+  <ion-item>
+    <ion-label stacked>
+      CVV
+    </ion-label>
+    <ion-input type="tel" placeholder="Enter 3 digit cvv">
+    </ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label stacked>
+      Phone No
+    </ion-label>
+    <ion-input type="tel" placeholder="Enter registered mobile no">
+    </ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label stacked>
+      PIN
+    </ion-label>
+    <ion-input type="{{type}}" placeholder="Enter PIN">
+    </ion-input>
+    <button item-end ion-button icon-only clear (click)="showPin()">
+      <ion-icon *ngIf="!visible" name="md-eye-off"></ion-icon>
+      <ion-icon *ngIf="visible" name="md-eye"></ion-icon>
+    </button>
+  </ion-item>
+
+
+
+</ion-content>

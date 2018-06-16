@@ -7,14 +7,14 @@
       <strong>Passbooks</strong>
     </h1>
     <p>12 entries found</p>
-    <button color="dark" ion-button item-end icon-only clear (click)="addPassbook()">
+    <button color="dark" ion-button item-end icon-only clear (click)="goToAddBankPage()">
       <ion-icon name="add"></ion-icon>
     </button>
   </ion-item>
 </ion-header>
 
 
-<ion-content >
+<ion-content>
 
   <div *isPresent padding text-center class="error-state">
     <h3> You have not added any passbook</h3>
@@ -24,8 +24,9 @@
     </ion-item>
   </div>
 
-  <div>
-    <ion-card class="card-class" *ngFor="let i of item">
+
+  <ion-card class="card-class" *ngFor="let i of item">
+    <div (click)="goToViewBankPage()" (press)="presentActionSheet()">
       <ion-item>
         <ion-avatar item-start>
           <img src="https://png.icons8.com/color/1600/museum.png" alt="bank logo">
@@ -33,14 +34,15 @@
         <h1 class="bank-name">Bank Name</h1>
         <ion-note>10:20 AM | Jan 1 2018</ion-note>
       </ion-item>
-  
-      <div padding>
 
-        <p class="card-number"><strong>A/c No:</strong> 1234567892123342</p>
-        <p class="card-number"><strong>IFSC:</strong> CORP0000067</p>
+      <div padding>
+        <p class="card-number">
+          <strong>A/c No:</strong> 1234567892123342</p>
+        <p class="card-number">
+          <strong>IFSC:</strong> CORP0000067</p>
       </div>
-  
-    </ion-card>
-  </div>
+    </div>
+  </ion-card>
+
 
 </ion-content>

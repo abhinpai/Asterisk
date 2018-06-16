@@ -1,7 +1,14 @@
+
 import { NgModule } from '@angular/core';
-import { UserAvatarComponent } from './components/user-avatar';
 import { IonicModule } from 'ionic-angular';
-import { AuthServiceProvider } from './services/Auth.services';
+
+// Custom Compoents declaration
+import { UserAvatarComponent } from './components/user-avatar';
+
+// Custom service declaration
+import { AuthServiceProvider } from './services/auth.services';
+import { Helper } from './services/helper.service';
+
 
 @NgModule({
     declarations: [
@@ -14,7 +21,8 @@ import { AuthServiceProvider } from './services/Auth.services';
         UserAvatarComponent
     ],
     providers:[
-        AuthServiceProvider
+        AuthServiceProvider,
+        Helper
     ]
 })
 export class CoreModule { }

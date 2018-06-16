@@ -1,0 +1,144 @@
+<ion-header no-border>
+  <ion-navbar transparent>
+    <ion-title>Add Passbook</ion-title>
+    <ion-buttons end>
+      <button class="add-card-btn" ion-button clear icon-only (click)="addNewCard()">
+        <ion-icon name="add"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content>
+
+  <ion-item>
+    <ion-avatar item-start>
+      <img src="https://png.icons8.com/flat_round/1600/error.png" alt="provider">
+    </ion-avatar>
+    <ion-input type="text" placeholder="Enter bank name"></ion-input>
+  </ion-item>
+
+
+  <ion-card class="account-card">
+    <ion-item class="card-title">
+      <h1>
+        Account Details
+      </h1>
+    </ion-item>
+
+    <ion-item>
+      <ion-label stacked>
+        A/c Holder Name
+      </ion-label>
+      <ion-input type="text" placeholder="Enter A/c holder name">
+      </ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label stacked>
+        A/c No
+      </ion-label>
+      <ion-input type="tel" placeholder="Enter account no">
+      </ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label stacked>IFSC No</ion-label>
+      <ion-input type="tel" placeholder="Enter IFSC no">
+      </ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label stacked>
+        Nomine Name
+      </ion-label>
+      <ion-input type="text" placeholder="Enter nomine name">
+      </ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label stacked>
+        Phone No
+      </ion-label>
+      <ion-input type="tel" placeholder="Enter registered mobile no">
+      </ion-input>
+    </ion-item>
+  </ion-card>
+
+  <ion-card class="bank-card">
+    <ion-item class="card-title">
+      <h1>
+        Bank Details
+      </h1>
+    </ion-item>
+
+    <ion-item>
+      <ion-label stacked>
+        Address
+      </ion-label>
+      <ion-textarea type="text" placeholder="Enter Bank Address">
+      </ion-textarea>
+    </ion-item>
+
+    <ion-item>
+      <ion-label stacked>
+        Primary Contact No
+      </ion-label>
+      <ion-input type="tel" placeholder="Enter Primary No">
+      </ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label stacked>
+        Secondary Contact No
+      </ion-label>
+      <ion-input type="tel" placeholder="Enter Secondary No">
+      </ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label stacked>
+        Fax
+      </ion-label>
+      <ion-input type="tel" placeholder="Enter Fax No ">
+      </ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label stacked>
+        Email
+      </ion-label>
+      <ion-input type="email" placeholder="Enter Bank Official Email Id">
+      </ion-input>
+    </ion-item>
+
+  </ion-card>
+
+  <ion-card class="doc-card">
+    <ion-item class="card-title">
+      <h1>
+        Passbook/Card Image
+      </h1>
+      <button ion-button icon-only clear color="dark" item-end (click)="presentActionSheet()">
+        <ion-icon name="md-add-circle"></ion-icon>
+      </button>
+    </ion-item>
+
+    <ion-item text-center>
+
+      <div class="media-class" >
+        <span (click)="removePhoto()" class="deleteIcon">
+          <ion-icon name="ios-close-outline"></ion-icon>
+        </span>
+        <img (click)="viewPhoto()" [src]="document_object" *ngIf="document_object" />
+      </div>
+
+    </ion-item>
+  </ion-card>
+
+</ion-content>
+
+<!-- <div class="my-overlay" padding [hidden]="overlayHidden">
+  <button full (click)="hideOverlay()">Click me</button>
+</div> -->

@@ -1,3 +1,4 @@
+import { Helper } from './../../Core/services/helper.service';
 
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
@@ -10,19 +11,39 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class LoginPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  pin: any;
+
+
+  constructor(public navCtrl: NavController,
+    public helper: Helper,
+    public navParams: NavParams) {
   }
 
-  loginUser(){
-    this.navCtrl.setRoot("HomePage");
+  loginUser() {
+    if (this.pin.length == 0) {
+      this.helper.presentToast("PIN can not be empty");
+      return;
+    } else if (this.pin.length != 4) {
+      this.helper.presentToast("Please enter valid PIN and try again");
+      return;
+    } else if (this.pin != localStorage.getItem("U-PIN")) {
+      this.helper.presentToast("Invalid Credentails.");
+      return;
+    }
+    else {
+      localStorage.setItem("isLoggedIn", "true");
+      localStorage.setItem("loggedInAt", new Date().toISOString());
+      this.navCtrl.setRoot("HomePage");
+    }
+
   }
 
-  signUpUser(){
+  signUpUser() {
     this.navCtrl.setRoot("SignupPage");
   }
 
-  forgetPassword(){
-    this.navCtrl.setRoot("ResetPasswordPage");
+  forgetPassword() {
+    this.navCtrl.push("ResetPasswordPage");
   }
 
 }
