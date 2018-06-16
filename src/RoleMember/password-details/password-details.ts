@@ -18,8 +18,7 @@ export class PasswordDetailsPage {
     public actionCtrl: ActionSheetController,
     public alertCtrl: AlertController,
     public passDBService: PasswordDBServiceProvider,
-    public navParams: NavParams) {
-  }
+    public navParams: NavParams) { }
 
   ionViewWillEnter() {
     this.passDBService.retrievePassword()
@@ -32,8 +31,9 @@ export class PasswordDetailsPage {
       });
   }
 
-  goToViewPasswordPage() {
-    this.navCtrl.push("ViewPasswordPage");
+
+  goToViewPasswordPage(data) {
+    this.navCtrl.push("ViewPasswordPage", data);
   }
 
   presentActionSheet() {
@@ -66,16 +66,15 @@ export class PasswordDetailsPage {
     this.navCtrl.push("AddPasswordPage");
   }
 
-  viewPassword() {
+  viewPassword(index) {
     const alert = this.alertCtrl.create({
       title: 'Your password is',
-      subTitle: 'Password',
+      subTitle: this.passwordData[index].password,
       message: 'Do not share your password with any suspecious person or with anybody!',
       buttons: ['OK']
     });
     alert.present();
   }
-
 
   editCredetial() {
     this.navCtrl.push("EditPasswordPage");
@@ -101,6 +100,23 @@ export class PasswordDetailsPage {
       ]
     });
     confirm.present();
+  }
+
+  getItems(ev: any) {
+
+    this.passDBService.retrievePassword().then(res =>{
+      if(res){
+        this.passwordData = res;
+        const val = ev.target.value;
+        if (val && val.trim() != '') {
+          this.passwordData = this.passwordData.filter((item) => {
+            return (item.provider.toLowerCase().indexOf(val.toLowerCase()) > -1);
+          });
+        }
+      }
+
+    });
+    
   }
 
 }

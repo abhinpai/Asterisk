@@ -27,6 +27,7 @@ export class SettingPage {
     public helper: Helper,
     public authService: AuthServiceProvider,
     public navParams: NavParams) {
+
   }
 
   ionViewDidLoad() {

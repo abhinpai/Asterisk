@@ -13,16 +13,17 @@ export class HomePage {
   userName: any;
   profilePhoto: any;
 
-  constructor(public navCtrl: NavController, 
+
+  constructor(public navCtrl: NavController,
     public photoViewer: PhotoViewer,
     public navParams: NavParams) {
   }
 
-  viewProfilePhoto(){
+  viewProfilePhoto() {
     this.photoViewer.show(this.profilePhoto);
   }
 
-  ionViewWillEnter(){
+  ionViewWillEnter() {
     this.userName = localStorage.getItem('UserName');
     this.profilePhoto = localStorage.getItem('ProfilePhoto');
   }
