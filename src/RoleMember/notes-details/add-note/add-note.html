@@ -14,14 +14,14 @@
     <ion-label stacked>
       Notes Title
     </ion-label>
-    <ion-input type="text" placeholder="Enter Title">
+    <ion-input type="text" placeholder="Enter Title" [(ngModel)]="notes.title">
     </ion-input>
   </ion-item>
   <ion-item>
     <ion-label stacked>
       Description
     </ion-label>
-    <ion-textarea type="text" placeholder="Enter description here">
+    <ion-textarea type="text" placeholder="Enter description here" [(ngModel)]="notes.description">
     </ion-textarea>
   </ion-item>
 </ion-content>
