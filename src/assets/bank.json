@@ -1,0 +1,32 @@
+[
+    {
+        "name": "alfabank",
+        "primary_name": "alfa",
+        "secondary_name": "ab",
+        "path": "assets/imgs/bank_logos/jpg/alfabank.jpg"
+    },
+    {
+        "name": "alhabadbank",
+        "primary_name": "alhabad",
+        "secondary_name": "alhabad",
+        "path": "assets/imgs/bank_logos/jpg/alhabadbank.jpg"
+    },
+    {
+        "name": "bankofamerica",
+        "primary_name": "americabank",
+        "secondary_name": "boa",
+        "path": "assets/imgs/bank_logos/jpg/bankofamerica.jpg"
+    },
+    {
+        "name": "canarabank",
+        "primary_name": "kanara",
+        "secondary_name": "canara",
+        "path": "assets/imgs/bank_logos/jpg/canarabank.jpg"
+    },
+    {
+        "name": "centralbankofindia",
+        "primary_name": "centralbank",
+        "secondary_name": "cbi",
+        "path": "assets/imgs/bank_logos/jpg/centralbankofindia.jpg"
+    }
+]

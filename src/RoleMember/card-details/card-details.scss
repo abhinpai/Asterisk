@@ -20,15 +20,14 @@ page-card-details {
     .error-state {
         margin-top: 120px;
     }
-    .card-class {
-        border-radius: 3%;
-    }
     .bank-name {
         font-weight: 800;
+        color: white;
     }
     .card-number {
         font-size: 22px;
         margin-top: 11px;
+        color: white;
     }
     .row {
         margin-top: 20px;
@@ -37,5 +36,17 @@ page-card-details {
         font-weight: 500;
         font-size: 20px;
         margin: 11px;
+        color: white;
+    }
+    .card-class {
+        border-radius: 3%;
+        color: white; // height: 235px;
+        background: linear-gradient(135deg, #45484d 0%, #000000 100%);
+        box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.75);
+        transition: transform .3s ease, box-shadow .2s ease-in;
+    }
+    .card-item {
+        background: transparent;
+        color: white;
     }
 }
