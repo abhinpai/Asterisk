@@ -6,7 +6,8 @@
     <h1>
       <strong>Notes</strong>
     </h1>
-    <p>12 entries found</p>
+    <p *ngIf="!isPresent">No entries found</p>
+    <p *ngIf="isPresent">{{notesData.length}} entries found</p>
     <button color="dark" ion-button item-end icon-only clear (click)="goToAddNotePage()">
       <ion-icon name="add"></ion-icon>
     </button>
@@ -15,25 +16,26 @@
 
 
 <ion-content>
-  <div *isPresent padding text-center class="error-state">
+  <div *ngIf="!isPresent" padding text-center class="error-state">
     <h3> Found not secrate notes</h3>
     <p class="error-state-p">Start adding new notes and keep secrately</p>
     <ion-item text-center>
-      <button class="button-add-pass" ion-button round>Let's start adding</button>
+      <button (click)="goToAddNotePage()" class="button-add-pass" ion-button round>Let's start adding</button>
     </ion-item>
   </div>
 
-  <ion-card class="card-class" *ngFor="let i of item">
-    <div (click)="goToViewNotePage()" (press)="presentActionSheet()">
-      <ion-item>
-        <h1 class="bank-name">Notes title</h1>
-        <ion-note>10:20 AM | Jan 1 2018</ion-note>
-      </ion-item>
-      <div padding text-justify>
-        <p class="card-number">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae illum nesciunt sed dolor molestias non nemo, dignissimos
-          unde! Earum odio nostrum dicta eius ratione quod, quaerat sunt id odit? Eius.</p>
+  <div *ngIf="isPresent">
+    <ion-card class="card-class" *ngFor="let item of notesData;let i=index">
+      <div (click)="goToViewNotePage(item)" (press)="presentActionSheet(item.id, item)">
+        <ion-item>
+          <h1 class="bank-name">{{item.title}}</h1>
+          <ion-note>{{item.created_at | date}} {{item.created_at | date:'shortTime'}}</ion-note>
+        </ion-item>
+        <div padding text-justify>
+          <p class="card-number">{{item.description}}</p>
+        </div>
       </div>
-    </div>
-  </ion-card>
+    </ion-card>
+  </div>
 
 </ion-content>

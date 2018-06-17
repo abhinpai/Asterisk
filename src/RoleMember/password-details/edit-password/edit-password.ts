@@ -51,12 +51,52 @@ export class EditPasswordPage {
   // }
 
   updatePasswordDetails(){
+    if (this.passwordData.provider.length == 0) {
+      this.helper.presentToast("Please enter Provider Name");
+      return;
+    }
+
+    if (this.passwordData.username.length == 0) {
+      this.helper.presentToast("Please enter Username");
+      return;
+    }
+
+    if (this.passwordData.username.length > 30) {
+      this.helper.presentToast("The Username length can't excede more than 15 character");
+      return;
+    }
+
+    if (this.passwordData.email.length == 0) {
+      this.helper.presentToast("Please enter email address");
+      return;
+    }
+
+    if (!this.validateEmail(this.passwordData.email)) {
+      this.helper.presentToast("Please enter valid email address");
+      return;
+    }
+
+    if (this.passwordData.password.length == 0) {
+      this.helper.presentToast("Please enter Password");
+      return;
+    }
+
+    if (this.passwordData.password.length > 30) {
+      this.helper.presentToast("The password length can't excede more than 15 character");
+      return;
+    }
+
     this.passwordData.updated_at = new Date().toISOString();
     this.passDBService.updatePassword(this.passwordData)
     .then(res =>{
       this.helper.presentToast("Password successfully updated");
       this.navCtrl.pop();
     }).catch(e => console.log(e));
+  }
+
+  validateEmail(email) {
+    var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(email);
   }
 
 }

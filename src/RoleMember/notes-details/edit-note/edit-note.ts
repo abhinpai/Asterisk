@@ -1,12 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-
-/**
- * Generated class for the EditNotePage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+import { Helper } from '../../../Core/services/helper.service';
+import { NotesDBServiceProvider } from '../services/notes-db.service';
 
 @IonicPage()
 @Component({
@@ -15,11 +10,45 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class EditNotePage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  notesData: any;
+
+  constructor(public navCtrl: NavController,
+    public helper: Helper,
+    public notesService: NotesDBServiceProvider,
+     public navParams: NavParams) {
+
+      this.notesData = this.navParams.data;
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad EditNotePage');
+  saveNote(){
+
+    // this.notesData.updated_at = new Date().toISOString();
+
+    if (this.notesData.title.length == 0) {
+      this.helper.presentToast("Please enter title");
+      return
+    } else if (this.notesData.title.length > 100) {
+      this.helper.presentToast("The title can not be exceed 50 characters");
+      return
+    } else if (this.notesData.description.length == 0) {
+      this.helper.presentToast("Please enter description");
+      return
+    } else if (this.notesData.description.length > 1000) {
+      this.helper.presentToast("The description can not be exceed 50 characters");
+      return
+    } else {
+      this.notesService.updateNotes(this.notesData)
+        .then(res => {
+          this.helper.presentToast("Note has been updated successfully");
+          this.navCtrl.pop();
+        }).catch(e => {
+          this.helper.presentToast(e);
+        });
+    }
+
+    
+    
   }
+
 
 }
