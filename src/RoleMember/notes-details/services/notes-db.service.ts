@@ -70,7 +70,7 @@ export class NotesDBServiceProvider {
     updateNotes(formData) {
         return new Promise((resolve, reject) => {
             this.sqlite.create({ name: 'DB-Asterisk-3.db', location: 'default' }).then((db: SQLiteObject) => {
-                db.executeSql('UPDATE notes SET title=?, description=?, created_at=?, updated_at=?, WHERE id=?',
+                db.executeSql('UPDATE notes SET title=?, description=?, created_at=?, updated_at=? WHERE id=?',
                     [formData.title, formData.description, formData.created_at, formData.updated_at, formData.id])
                     .then(res => {
                         resolve(res);

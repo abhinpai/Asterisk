@@ -1,0 +1,30 @@
+[
+    {
+        "name": "americanexpress",
+        "path": "assets/imgs/service_logos/svg/americanexpress.svg"
+    },
+    {
+        "name": "citi",
+        "path": "assets/imgs/service_logos/svg/citi.svg"
+    },
+    {
+        "name": "mastercard",
+        "path": "assets/imgs/service_logos/svg/mastercard.svg"
+    },
+    {
+        "name": "mastero",
+        "path": "assets/imgs/service_logos/svg/mastero.svg"
+    },
+    {
+        "name": "paypal",
+        "path": "assets/imgs/service_logos/svg/paypal.svg"
+    },
+    {
+        "name": "rupay",
+        "path": "assets/imgs/service_logos/svg/rupay.svg"
+    },
+    {
+        "name": "visa",
+        "path": "assets/imgs/service_logos/svg/visa.svg"
+    }
+]
