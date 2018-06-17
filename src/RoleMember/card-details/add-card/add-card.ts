@@ -182,14 +182,6 @@ export class AddCardPage {
       }
     }
 
-    if (this.cardData.provider_logo == '' && this.cardData.service_provider != '') {
-      for (let i = 0; i < this.service_logos.length; i++) {
-        if (this.service_logos[i].name == this.cardData.service_provider.toLowerCase()) {
-          this.cardData.provider_logo = this.service_logos[i].path;
-        }
-      }
-    }
-
     console.log(this.cardData);
 
   }
@@ -197,6 +189,17 @@ export class AddCardPage {
   validateEmail(email) {
     var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     return re.test(email);
+  }
+
+
+  setProviderLogo(){
+    console.log("123");
+    
+    for (let i = 0; i < this.service_logos.length; i++) {
+      if (this.service_logos[i].name == this.cardData.service_provider.toLowerCase()) {
+        this.cardData.provider_logo = this.service_logos[i].path;
+      }
+    }
   }
 
 }

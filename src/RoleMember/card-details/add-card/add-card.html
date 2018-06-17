@@ -82,12 +82,12 @@
 
   <ion-item>
     <ion-label>Wrong card provider / Not Found</ion-label>
-    <ion-select [(ngModel)]="cardData.service_provider">
-      <ion-option value="Rupay">Rupay</ion-option>
-      <ion-option value="Mastercard">Mastercard</ion-option>
-      <ion-option value="Mastero">Mastero</ion-option>
-      <ion-option value="Visa">Visa</ion-option>
-      <ion-option value="AmericanExpress">American Express</ion-option>
+    <ion-select [(ngModel)]="cardData.service_provider" (ionChange)="setProviderLogo()">
+      <ion-option value="rupay">Rupay</ion-option>
+      <ion-option value="mastercard">Mastercard</ion-option>
+      <ion-option value="mastero">Mastero</ion-option>
+      <ion-option value="visa">Visa</ion-option>
+      <ion-option value="americanexpress">American Express</ion-option>
     </ion-select>
   </ion-item>
 
