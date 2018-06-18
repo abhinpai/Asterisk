@@ -35,9 +35,6 @@ export class EditCardPage {
         this.service_logos = res;
       });
 
-
-    this.cardData.provider_logo = '';
-    this.cardData.service_provider = '';
     console.log("clearing");
   }
 
@@ -90,10 +87,14 @@ export class EditCardPage {
   }
 
   editCardDetail(){
-    
+    this.cardService.updateCard(this.cardData)
+    .then(res =>{
+      this.helper.presentToast("Card details has been updated successfully");
+      this.navCtrl.pop();
+    }).catch(e => console.log(e));
   }
 
-  setProviderLogos() {
+  setProviderLogo() {
     for (let i = 0; i < this.service_logos.length; i++) {
       if (this.service_logos[i].name == this.cardData.service_provider.toLowerCase()) {
         this.cardData.provider_logo = this.service_logos[i].path;
