@@ -28,5 +28,227 @@
         "primary_name": "centralbank",
         "secondary_name": "cbi",
         "path": "assets/imgs/bank_logos/jpg/centralbankofindia.jpg"
+    },
+    {
+        "name": "corporationbank",
+        "primary_name": "corporation",
+        "secondary_name": "corp",
+        "path": "assets/imgs/bank_logos/jpg/corpbank.jpg"
+    },
+    {
+        "name": "denabank",
+        "primary_name": "dena",
+        "secondary_name": "db",
+        "path": "assets/imgs/bank_logos/jpg/denabank.jpg"
+    },
+    {
+        "name": "induslandbank",
+        "primary_name": "indusland",
+        "secondary_name": "indus",
+        "path": "assets/imgs/bank_logos/jpg/induslandbank.jpg"
+    },
+    {
+        "name": "karnatakabank",
+        "primary_name": "karnataka",
+        "secondary_name": "karbank",
+        "path": "assets/imgs/bank_logos/jpg/karnatakabank.jpg"
+    },
+    {
+        "name": "kvbbank",
+        "primary_name": "karurvysyabank ",
+        "secondary_name": "karurvysya",
+        "path": "assets/imgs/bank_logos/jpg/kvbbank.jpg"
+    },
+    {
+        "name": "lakshmivilasbank",
+        "primary_name": "lakshmivilas",
+        "secondary_name": "lvb",
+        "path": "assets/imgs/bank_logos/jpg/lakshmivilasbank.jpg"
+    },
+    {
+        "name": "monetamoneybank",
+        "primary_name": "monetamoney",
+        "secondary_name": "mmb",
+        "path": "assets/imgs/bank_logos/jpg/monetamoneybank.jpg"
+    },
+    {
+        "name": "standardchartedbank",
+        "primary_name": "standardcharted",
+        "secondary_name": "scb",
+        "path": "assets/imgs/bank_logos/jpg/standardchartedbank.jpg"
+    },
+    {
+        "name": "andhrabank",
+        "primary_name": "andhra",
+        "secondary_name": "andhra",
+        "path": "assets/imgs/bank_logos/png/andhrabank.png"
+    },
+    {
+        "name": "axisbank",
+        "primary_name": "axis",
+        "secondary_name": "axis",
+        "path": "assets/imgs/bank_logos/png/axisbank.png"
+    },
+    {
+        "name": "bankofbaroda",
+        "primary_name": "baroda",
+        "secondary_name": "bb",
+        "path": "assets/imgs/bank_logos/png/bankofbaroda.png"
+    },
+    {
+        "name": "bankofindia",
+        "primary_name": "boi",
+        "secondary_name": "boi",
+        "path": "assets/imgs/bank_logos/png/bankofindia.png"
+    },
+    {
+        "name": "bankofmaharashtra",
+        "primary_name": "maharashtra",
+        "secondary_name": "bom",
+        "path": "assets/imgs/bank_logos/png/bankofmaharashtra.png"
+    },
+    {
+        "name": "britishbusinessbank",
+        "primary_name": "britishbusiness",
+        "secondary_name": "bbb",
+        "path": "assets/imgs/bank_logos/png/britishbusinessbank.png"
+    },
+    {
+        "name": "citibank",
+        "primary_name": "citi",
+        "secondary_name": "citi",
+        "path": "assets/imgs/bank_logos/png/citibank.png"
+    },
+    {
+        "name": "citizensbank",
+        "primary_name": "citizens",
+        "secondary_name": "citizens",
+        "path": "assets/imgs/bank_logos/png/citizensbank.png"
+    },
+    {
+        "name": "cityunionbank",
+        "primary_name": "cityunion",
+        "secondary_name": "cub",
+        "path": "assets/imgs/bank_logos/png/cityunionbank.png"
+    },
+    {
+        "name": "federalbank",
+        "primary_name": "federal",
+        "secondary_name": "fb",
+        "path": "assets/imgs/bank_logos/png/federalbank.png"
+    },
+    {
+        "name": "hdfcbank",
+        "primary_name": "hdfc",
+        "secondary_name": "hdfc",
+        "path": "assets/imgs/bank_logos/png/hdfcbank.png"
+    },
+    {
+        "name": "hsbcbank",
+        "primary_name": "hsbc",
+        "secondary_name": "hsbc",
+        "path": "assets/imgs/bank_logos/png/hsbcbank.png"
+    },
+    {
+        "name": "idbibank",
+        "primary_name": "idbi",
+        "secondary_name": "idbi",
+        "path": "assets/imgs/bank_logos/png/idbibank.png"
+    },
+    {
+        "name": "indianbank",
+        "primary_name": "indian",
+        "secondary_name": "ib",
+        "path": "assets/imgs/bank_logos/png/hsbcbank.png"
+    },
+    {
+        "name": "indianoverseasbank",
+        "primary_name": "indianoverseas",
+        "secondary_name": "iob",
+        "path": "assets/imgs/bank_logos/png/indianoverseasbank.png"
+    },
+    {
+        "name": "indianpost",
+        "primary_name": "post",
+        "secondary_name": "postoffice",
+        "path": "assets/imgs/bank_logos/png/indianpost.png"
+    },
+    {
+        "name": "ingbank",
+        "primary_name": "ingvysya",
+        "secondary_name": "ing",
+        "path": "assets/imgs/bank_logos/png/ingbank.png"
+    },
+    {
+        "name": "kotakmahindrabank",
+        "primary_name": "kotak",
+        "secondary_name": "kotakbank",
+        "path": "assets/imgs/bank_logos/png/kotakmahindrabank.png"
+    },
+    {
+        "name": "orientalbankofcommerce",
+        "primary_name": "obc",
+        "secondary_name": "obc",
+        "path": "assets/imgs/bank_logos/png/orientalbankofcommerce.png"
+    },
+    {
+        "name": "punjabunionbank",
+        "primary_name": "punjabunion",
+        "secondary_name": "pub",
+        "path": "assets/imgs/bank_logos/png/punjabunionbank.png"
+    },
+    {
+        "name": "rbsbank",
+        "primary_name": "rbs",
+        "secondary_name": "rbs",
+        "path": "assets/imgs/bank_logos/png/rbsbank.png"
+    },
+    {
+        "name": "sbibank",
+        "primary_name": "statebankofindia",
+        "secondary_name": "sbi",
+        "path": "assets/imgs/bank_logos/png/sbibank.png"
+    },
+    {
+        "name": "southindianbank",
+        "primary_name": "southindian",
+        "secondary_name": "sib",
+        "path": "assets/imgs/bank_logos/png/southindianbank.png"
+    },
+    {
+        "name": "syndicatebank",
+        "primary_name": "syndicate",
+        "secondary_name": "synd",
+        "path": "assets/imgs/bank_logos/png/syndicatbank.png"
+    },
+    {
+        "name": "ucobank",
+        "primary_name": "uco",
+        "secondary_name": "uco",
+        "path": "assets/imgs/bank_logos/png/uco-bank-logo.png"
+    },
+    {
+        "name": "unitedbankofindia",
+        "primary_name": "unitedbank",
+        "secondary_name": "ubi",
+        "path": "assets/imgs/bank_logos/png/unitedbankofindia.png"
+    },
+    {
+        "name": "vijayabank",
+        "primary_name": "vijaya",
+        "secondary_name": "vb",
+        "path": "assets/imgs/bank_logos/png/vijayabank.png"
+    },
+    {
+        "name": "westernunionbank",
+        "primary_name": "westernunion",
+        "secondary_name": "wu",
+        "path": "assets/imgs/bank_logos/png/westernunionbank.png"
+    },
+    {
+        "name": "yesbank",
+        "primary_name": "yes",
+        "secondary_name": "yb",
+        "path": "assets/imgs/bank_logos/png/yesbank.png"
     }
 ]

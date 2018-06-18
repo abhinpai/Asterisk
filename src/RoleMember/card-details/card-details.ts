@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, ActionSheetController, AlertController } from 'ionic-angular';
+import { Helper } from '../../Core/services/helper.service';
+import { CardDBServiceProvider } from './services/card-db.service';
 
 @IonicPage()
 @Component({
@@ -8,34 +10,52 @@ import { IonicPage, NavController, NavParams, ActionSheetController, AlertContro
 })
 export class CardDetailsPage {
 
-  item = [1, 2, 3, 4, 5]
+  cardData: any;
+  isPresent: boolean;
 
   constructor(public navCtrl: NavController,
     public actionCtrl: ActionSheetController,
     public alertCtrl: AlertController,
+    public helper: Helper,
+    public cardService: CardDBServiceProvider,
     public navParams: NavParams) {
   }
 
-  viewCard() {
-    this.navCtrl.push("ViewCardPage");
-    console.log("Test");
+  ionViewWillEnter() {
+    this.initialize();
+  }
+
+  initialize() {
+    this.cardService.retrieveCard()
+      .then(res => {
+        this.cardData = res;
+        if (this.cardData.length != 0)
+          this.isPresent = true;
+        else
+          this.isPresent = false;
+        console.log(this.cardData);
+      });
+  }
+
+  viewCard(item) {
+    this.navCtrl.push("ViewCardPage", item);
   }
 
 
-  presentActionSheet() {
+  presentActionSheet(id, item) {
     let actionSheet = this.actionCtrl.create({
       title: 'Manipulate Card Details',
       buttons: [
         {
           text: 'Edit',
           handler: () => {
-            this.goToeditCardPage();
+            this.goToeditCardPage(item);
           }
         },
         {
           text: 'Delete',
           handler: () => {
-            this.deleteCard();
+            this.deleteCard(id);
           }
         },
         {
@@ -52,13 +72,13 @@ export class CardDetailsPage {
     this.navCtrl.push("AddCardPage");
   }
 
-  goToeditCardPage() {
-    this.navCtrl.push("EditCardPage");
+  goToeditCardPage(item) {
+    this.navCtrl.push("EditCardPage", item);
   }
 
-  deleteCard() {
+  deleteCard(id) {
     const confirm = this.alertCtrl.create({
-      title: 'Delete card',
+      title: 'Delete Card',
       message: 'Are you sure you want to delete?',
       buttons: [
         {
@@ -70,7 +90,11 @@ export class CardDetailsPage {
         {
           text: 'Yes, Delete',
           handler: () => {
-
+            this.cardService.deleteCard(id)
+              .then(res => {
+                this.helper.presentToast("Card has been successfuly deleted");
+                this.initialize();
+              });
           }
         }
       ]
@@ -78,5 +102,22 @@ export class CardDetailsPage {
     confirm.present();
   }
 
+
+  getItems(ev: any) {
+
+    this.cardService.retrieveCard().then(res => {
+      if (res) {
+        this.cardData = res;
+        const val = ev.target.value;
+        if (val && val.trim() != '') {
+          this.cardData = this.cardData.filter((item) => {
+            return (item.bank.toLowerCase().indexOf(val.toLowerCase()) > -1);
+          });
+        }
+      }
+
+    });
+
+  }
 
 }

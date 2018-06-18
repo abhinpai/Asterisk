@@ -1,6 +1,6 @@
 <ion-header no-border>
   <ion-navbar transparent>
-    <ion-title>Debit Card</ion-title>
+    <ion-title>{{cardData.card_type}}</ion-title>
   </ion-navbar>
 </ion-header>
 
@@ -8,26 +8,32 @@
 <ion-content>
 
   <ion-card class="card-class">
-    <div (click)="viewCard()">
+    <div>
       <ion-item>
         <ion-avatar item-start>
-          <img src="https://png.icons8.com/color/1600/museum.png" alt="bank logo">
+          <img src="{{cardData.bank_logo}}" alt="bank logo">
         </ion-avatar>
-        <h1 class="bank-name">Bank Name</h1>
-        <ion-note>10:20 AM | Jan 1 2018</ion-note>
+        <h1 class="bank-name">{{cardData.bank}}</h1>
+        <ion-note>{{cardData.created_at | date}} {{cardData.created_at | date:'shortTime'}}</ion-note>
       </ion-item>
 
       <div text-center>
-        <p class="card-number">1234 5678 9212 3342</p>
+        <p class="card-number">{{cardData.card_no}}</p>
       </div>
 
       <div>
         <ion-row>
           <ion-col col-10>
-            <h3 class="card-title">12/2018</h3>
+            <h3>
+              <span  class="card-title">
+                Expire at:
+              </span>
+              <span class="card-expire">
+               {{cardData.expire_at | date: 'MM/yyyy'}}
+              </span></h3>
           </ion-col>
           <ion-col>
-            <img src="https://png.icons8.com/color/1600/mastercard-logo.png" alt="provider-logo">
+            <img src="{{cardData.provider_logo}}" alt="provider-logo">
           </ion-col>
         </ion-row>
       </div>
@@ -40,14 +46,16 @@
     <div class="cvv-strip">
       <p>CVV</p>
     </div>
-    <h2 class="cvv-number">777</h2>
+    <h2 class="cvv-number">{{cardData.cvv}}</h2>
 
-    <h2 class="phone-no-h2">Registered Phone No</h2>
-    <p class="phone-no-p">9035578965</p>
-  
+    <div>
+      <h2 class="phone-no-h2">Registered Phone No</h2>
+      <p class="phone-no-p" *ngIf="cardData.phone">{{cardData.phone}}</p>
+      <p class="phone-no-p" *ngIf="!cardData.phone">You have not added Phone No.</p>
+    </div>
   </ion-card>
 
-  <ion-item text-center >
+  <ion-item text-center>
     <button class="view-pin-btn" ion-button round (click)="viewPIN()">View PIN</button>
   </ion-item>
 

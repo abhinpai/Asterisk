@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { Helper } from '../../../Core/services/helper.service';
+import { CardDBServiceProvider } from '../services/card-db.service';
 
 
 @IonicPage()
@@ -38,6 +39,7 @@ export class AddCardPage {
   constructor(public navCtrl: NavController,
     public http: HttpClient,
     public helper: Helper,
+    public cardService: CardDBServiceProvider,
     public navParams: NavParams) {
   }
 
@@ -69,7 +71,8 @@ export class AddCardPage {
 
   setBankLogo(ev: any) {
     this.initializeBankLogo();
-    const val = ev.value.toLowerCase();
+    let val = ev.value.toLowerCase();
+    val = val.replace(/\s/g, "");
     for (let i = 0; i < this.bank_logos.length; i++) {
       if (this.bank_logos[i].name.toLowerCase() == val || this.bank_logos[i].primary_name.toLowerCase() == val || this.bank_logos[i].secondary_name.toLowerCase() == val) {
         this.cardData.bank_logo = this.bank_logos[i].path
@@ -182,7 +185,12 @@ export class AddCardPage {
       }
     }
 
-    console.log(this.cardData);
+    
+   this.cardService.addCard(this.cardData)
+   .then(res =>{
+     this.helper.presentToast("New card has been added successfully.");
+     this.navCtrl.pop();
+   }).catch(err => console.log(err));
 
   }
 
