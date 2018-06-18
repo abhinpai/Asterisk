@@ -25,7 +25,7 @@
     </ion-label>
     <ion-input type="tel" [(ngModel)]="cardData.card_no" (ionChange)="detectCardType($event)" placeholder="Enter Card No">
     </ion-input>
-    <div item-end class="provider" *ngIf="cardData.provider_logo">
+    <div item-end class="provider-logo" *ngIf="cardData.provider_logo">
       <img src="{{cardData.provider_logo}}" alt="provider_logo">
     </div>
   </ion-item>
