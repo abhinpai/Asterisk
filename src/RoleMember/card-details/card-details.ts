@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, ActionSheetController, AlertController } from 'ionic-angular';
+import { Helper } from '../../Core/services/helper.service';
+import { CardDBServiceProvider } from './services/card-db.service';
 
 @IonicPage()
 @Component({
@@ -8,12 +10,27 @@ import { IonicPage, NavController, NavParams, ActionSheetController, AlertContro
 })
 export class CardDetailsPage {
 
-  item = [1, 2, 3, 4, 5]
+  cardData: any;
+  isPresent: boolean;
 
   constructor(public navCtrl: NavController,
     public actionCtrl: ActionSheetController,
     public alertCtrl: AlertController,
+    public helper: Helper,
+    public cardService: CardDBServiceProvider,
     public navParams: NavParams) {
+  }
+
+  ionViewWillEnter() {
+    this.cardService.retrieveCard()
+      .then(res => {
+        this.cardData = res;
+        if (this.cardData.length != 0)
+          this.isPresent = true;
+        else
+          this.isPresent = false;
+          console.log(this.cardData);
+      });
   }
 
   viewCard() {

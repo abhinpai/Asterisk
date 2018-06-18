@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { Helper } from '../../../Core/services/helper.service';
+import { CardDBServiceProvider } from '../services/card-db.service';
 
 
 @IonicPage()
@@ -38,6 +39,7 @@ export class AddCardPage {
   constructor(public navCtrl: NavController,
     public http: HttpClient,
     public helper: Helper,
+    public cardService: CardDBServiceProvider,
     public navParams: NavParams) {
   }
 
@@ -182,7 +184,11 @@ export class AddCardPage {
       }
     }
 
-    console.log(this.cardData);
+   this.cardService.addCard(this.cardData)
+   .then(res =>{
+     this.helper.presentToast("New card has been added successfully.");
+     this.navCtrl.pop();
+   }).catch(err => console.log(err));
 
   }
 
