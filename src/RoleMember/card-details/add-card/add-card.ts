@@ -71,7 +71,8 @@ export class AddCardPage {
 
   setBankLogo(ev: any) {
     this.initializeBankLogo();
-    const val = ev.value.toLowerCase();
+    let val = ev.value.toLowerCase();
+    val = val.replace(/\s/g, "");
     for (let i = 0; i < this.bank_logos.length; i++) {
       if (this.bank_logos[i].name.toLowerCase() == val || this.bank_logos[i].primary_name.toLowerCase() == val || this.bank_logos[i].secondary_name.toLowerCase() == val) {
         this.cardData.bank_logo = this.bank_logos[i].path
@@ -184,6 +185,7 @@ export class AddCardPage {
       }
     }
 
+    
    this.cardService.addCard(this.cardData)
    .then(res =>{
      this.helper.presentToast("New card has been added successfully.");

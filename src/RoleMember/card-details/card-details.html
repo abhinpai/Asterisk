@@ -6,7 +6,8 @@
     <h1>
       <strong>Cards</strong>
     </h1>
-    <p>12 entries found</p>
+    <p *ngIf="isPresent">{{cardData.length}} entries found</p>
+    <p *ngIf="!isPresent">No entries found</p>
     <button color="dark" ion-button item-end icon-only clear (click)="goToaddCardPage()">
       <ion-icon name="add"></ion-icon>
     </button>
