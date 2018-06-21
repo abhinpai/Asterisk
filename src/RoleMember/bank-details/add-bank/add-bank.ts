@@ -1,8 +1,10 @@
+import { BankDBServiceProvider } from './../services/bank-db.service';
 import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, ActionSheetController } from 'ionic-angular';
 import { PhotoViewer } from '@ionic-native/photo-viewer';
 import { SystemService } from '../../../Core/services/system.service';
+import { Helper } from '../../../Core/services/helper.service';
 
 @IonicPage()
 @Component({
@@ -40,6 +42,8 @@ export class AddBankPage {
   constructor(public navCtrl: NavController,
     private photoViewer: PhotoViewer,
     public http: HttpClient,
+    public helper: Helper,
+    public bankService: BankDBServiceProvider,
     public systemService: SystemService,
     public actionCtrl: ActionSheetController,
     public navParams: NavParams) {
@@ -73,6 +77,12 @@ export class AddBankPage {
 
   addBank() {
     console.log(this.bankData);
+
+    this.bankService.addBank(this.bankData)
+    .then(() =>{
+      this.helper.presentToast("Account details has been added successfully.");
+      this.navCtrl.pop();
+    }).catch(e => alert(e));
   }
 
   presentActionSheet() {
