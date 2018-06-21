@@ -27,32 +27,61 @@
 
 
   <div *ngIf="isPresent">
-  <ion-card class="card-class" *ngFor="let item of cardData; let i=index">
-    <div (click)="viewCard(item)" (press)="presentActionSheet(item.id, item)">
-      <ion-item class="card-item">
-        <ion-avatar item-start>
-          <img src="{{item.bank_logo}}" alt="bank logo">
-        </ion-avatar>
-        <h1 class="bank-name">{{item.bank}}</h1>
-        <ion-note>{{item.created_at | date}} {{item.created_at | date:'shortTime'}}</ion-note>
-      </ion-item>
+    <div *ngFor="let item of cardData; let i=index">
+      <!-- <ion-card class="card-class" *ngIf="item.service_provider == 'mastero' || item.service_provider == 'mastercard'|| item.service_provider == 'americanexpress'">
+        <div (click)="viewCard(item)" (press)="presentActionSheet(item.id, item)">
+          <ion-item class="card-item">
+            <ion-avatar item-start>
+              <img src="{{item.bank_logo}}" alt="bank logo">
+            </ion-avatar>
+            <h1 class="bank-name">{{item.bank}}</h1>
+            <ion-note>{{item.created_at | date}} {{item.created_at | date:'shortTime'}}</ion-note>
+          </ion-item>
 
-      <div text-center>
-        <p class="card-number">{{item.card_no}}</p>
-      </div>
+          <div text-center>
+            <p class="card-number">{{item.card_no}}</p>
+          </div>
 
-      <div>
-        <ion-row>
-          <ion-col col-10>
-            <h3 class="card-title">{{item.card_type}}</h3>
-          </ion-col>
-          <ion-col>
-            <img src="{{item.provider_logo}}" alt="provider-logo">
-          </ion-col>
-        </ion-row>
-      </div>
+          <div>
+            <ion-row>
+              <ion-col col-10>
+                <h3 class="card-title">{{item.card_type}}</h3>
+              </ion-col>
+              <ion-col>
+                <img src="{{item.provider_logo}}" alt="provider-logo">
+              </ion-col>
+            </ion-row>
+          </div>
+        </div>
+      </ion-card> -->
+
+      <ion-card class="card-class">
+        <div (click)="viewCard(item)" (press)="presentActionSheet(item.id, item)">
+          <ion-item class="card-item">
+            <ion-avatar item-start>
+              <img src="{{item.bank_logo}}" alt="bank logo">
+            </ion-avatar>
+            <h1 class="bank-name">{{item.bank}}</h1>
+            <ion-note>{{item.created_at | date}} {{item.created_at | date:'shortTime'}}</ion-note>
+          </ion-item>
+      
+          <div text-center>
+            <p class="card-number">{{item.card_no}}</p>
+          </div>
+      
+          <div>
+            <ion-row>
+              <ion-col col-10>
+                <h3 class="card-title">{{item.card_type}}</h3>
+              </ion-col>
+              <ion-col>
+                <img src="{{item.provider_logo}}" alt="provider-logo">
+              </ion-col>
+            </ion-row>
+          </div>
+        </div>
+      </ion-card>
     </div>
-  </ion-card>
   </div>
 
 </ion-content>

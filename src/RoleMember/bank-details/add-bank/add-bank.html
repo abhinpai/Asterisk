@@ -2,7 +2,7 @@
   <ion-navbar transparent>
     <ion-title>Add Passbook</ion-title>
     <ion-buttons end>
-      <button class="add-card-btn" ion-button clear icon-only (click)="addNewCard()">
+      <button class="add-card-btn" ion-button clear icon-only (click)="addBank()">
         <ion-icon name="add"></ion-icon>
       </button>
     </ion-buttons>
@@ -14,9 +14,9 @@
 
   <ion-item>
     <ion-avatar item-start>
-      <img src="https://png.icons8.com/flat_round/1600/error.png" alt="provider">
+      <img src="{{bankData.bank_logo}}" alt="provider">
     </ion-avatar>
-    <ion-input type="text" placeholder="Enter bank name"></ion-input>
+    <ion-input type="text" placeholder="Enter bank name" [(ngModel)]="bankData.bank" (ionChange)="setBankLogo($event)"></ion-input>
   </ion-item>
 
 
@@ -31,7 +31,7 @@
       <ion-label stacked>
         A/c Holder Name
       </ion-label>
-      <ion-input type="text" placeholder="Enter A/c holder name">
+      <ion-input autocapitalize=on type="text" [(ngModel)]="bankData.ac_holder_name" placeholder="Enter A/c holder name">
       </ion-input>
     </ion-item>
 
@@ -39,13 +39,13 @@
       <ion-label stacked>
         A/c No
       </ion-label>
-      <ion-input type="tel" placeholder="Enter account no">
+      <ion-input type="tel" [(ngModel)]="bankData.ac_no" placeholder="Enter account no">
       </ion-input>
     </ion-item>
 
     <ion-item>
       <ion-label stacked>IFSC No</ion-label>
-      <ion-input type="tel" placeholder="Enter IFSC no">
+      <ion-input type="tel" [(ngModel)]="bankData.ifsc" placeholder="Enter IFSC no">
       </ion-input>
     </ion-item>
 
@@ -53,7 +53,7 @@
       <ion-label stacked>
         Nomine Name
       </ion-label>
-      <ion-input type="text" placeholder="Enter nomine name">
+      <ion-input autocapitalize=on type="text" [(ngModel)]="bankData.nomine" placeholder="Enter nomine name">
       </ion-input>
     </ion-item>
 
@@ -61,9 +61,18 @@
       <ion-label stacked>
         Phone No
       </ion-label>
-      <ion-input type="tel" placeholder="Enter registered mobile no">
+      <ion-input type="tel" [(ngModel)]="bankData.phone" placeholder="Enter registered mobile no">
       </ion-input>
     </ion-item>
+
+    <ion-item>
+      <ion-label stacked>
+        Email
+      </ion-label>
+      <ion-input type="email" [(ngModel)]="bankData.email" placeholder="Enter registered Email">
+      </ion-input>
+    </ion-item>
+
   </ion-card>
 
   <ion-card class="bank-card">
@@ -77,7 +86,7 @@
       <ion-label stacked>
         Address
       </ion-label>
-      <ion-textarea type="text" placeholder="Enter Bank Address">
+      <ion-textarea type="text" [(ngModel)]="bankData.address" placeholder="Enter Bank Address">
       </ion-textarea>
     </ion-item>
 
@@ -85,7 +94,7 @@
       <ion-label stacked>
         Primary Contact No
       </ion-label>
-      <ion-input type="tel" placeholder="Enter Primary No">
+      <ion-input type="tel" [(ngModel)]="bankData.primary_no" placeholder="Enter Primary No">
       </ion-input>
     </ion-item>
 
@@ -93,7 +102,7 @@
       <ion-label stacked>
         Secondary Contact No
       </ion-label>
-      <ion-input type="tel" placeholder="Enter Secondary No">
+      <ion-input type="tel" [(ngModel)]="bankData.secondary_no" placeholder="Enter Secondary No">
       </ion-input>
     </ion-item>
 
@@ -101,7 +110,7 @@
       <ion-label stacked>
         Fax
       </ion-label>
-      <ion-input type="tel" placeholder="Enter Fax No ">
+      <ion-input type="tel" [(ngModel)]="bankData.fax" placeholder="Enter Fax No ">
       </ion-input>
     </ion-item>
 
@@ -109,7 +118,7 @@
       <ion-label stacked>
         Email
       </ion-label>
-      <ion-input type="email" placeholder="Enter Bank Official Email Id">
+      <ion-input type="email" [(ngModel)]="bankData.bank_email" placeholder="Enter Bank Official Email Id">
       </ion-input>
     </ion-item>
 
@@ -125,16 +134,23 @@
       </button>
     </ion-item>
 
-    <ion-item text-center>
+    <ion-item text-center *ngIf="bankData.documents.length == 0" text-center>
+      <div class="upload-media">
+       <ion-icon name="ios-cloud-upload-outline"></ion-icon>
+       <p>Add Document</p>
+      </div>
+    </ion-item>
 
-      <div class="media-class" >
+    <ion-item *ngIf="bankData.documents.length > 0" text-center>
+      <div class="media-class">
         <span (click)="removePhoto()" class="deleteIcon">
           <ion-icon name="ios-close-outline"></ion-icon>
         </span>
         <img (click)="viewPhoto()" [src]="document_object" *ngIf="document_object" />
       </div>
-
     </ion-item>
+
+
   </ion-card>
 
 </ion-content>

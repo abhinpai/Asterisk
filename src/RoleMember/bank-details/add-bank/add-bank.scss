@@ -9,7 +9,7 @@ page-add-bank {
         box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 1px 1px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
     }
     .account-card {
-        height: 370px;
+        height: 432px;
     }
     .bank-card {
         height: 388px;
@@ -19,6 +19,15 @@ page-add-bank {
         h1 {
             font-size: 20px;
             font-weight: 600;
+        }
+    }
+    .upload-media {
+        ion-icon {
+            font-size: 37px;
+            margin-top: 9px;
+        }
+        p {
+            font-size: 20px;
         }
     }
     .add-card-btn {
