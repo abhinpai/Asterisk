@@ -1,6 +1,7 @@
+import { BankDBServiceProvider } from './services/bank-db.service';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, AlertController, ActionSheetController } from 'ionic-angular';
-
+import { Helper } from '../../Core/services/helper.service';
 
 @IonicPage()
 @Component({
@@ -9,32 +10,50 @@ import { IonicPage, NavController, NavParams, AlertController, ActionSheetContro
 })
 export class BankDetailsPage {
 
-  item = [1, 2, 3, 4, 5];
+  bankData: any;
+  isPresent: boolean;
 
   constructor(public navCtrl: NavController,
     public alertCtrl: AlertController,
+    public helper: Helper,
+    public bankService: BankDBServiceProvider,
     public actionCtrl: ActionSheetController,
     public navParams: NavParams) {
   }
 
-  goToViewBankPage() {
-    this.navCtrl.push("ViewBankPage");
+  ionViewWillEnter(){
+    this.initialize();
   }
 
-  presentActionSheet() {
+  initialize(){
+    this.bankService.retrieveBank()
+    .then(res =>{
+      this.bankData = res;
+      if(this.bankData.length > 0)
+      this.isPresent = true;
+      else
+      this.isPresent = false;
+    })
+  }
+
+  goToViewBankPage(item) {
+    this.navCtrl.push("ViewBankPage", item);
+  }
+
+  presentActionSheet(id, item) {
     let actionSheet = this.actionCtrl.create({
       title: 'Manipulate Bank Details',
       buttons: [
         {
           text: 'Edit',
           handler: () => {
-            this.goToEditBankPage();
+            this.goToEditBankPage(item);
           }
         },
         {
           text: 'Delete',
           handler: () => {
-            this.deleteBankDetails();
+            this.deleteBankDetails(id);
           }
         },
         {
@@ -47,15 +66,15 @@ export class BankDetailsPage {
     actionSheet.present();
   }
 
-  goToEditBankPage() {
-    this.navCtrl.push("EditBankPage");
+  goToEditBankPage(item) {
+    this.navCtrl.push("EditBankPage", item);
   }
 
   goToAddBankPage(){
     this.navCtrl.push("AddBankPage");
   }
 
-  deleteBankDetails() {
+  deleteBankDetails(id) {
     const confirm = this.alertCtrl.create({
       title: 'Delete Bank Details',
       message: 'Are you sure you want to delete?',
@@ -70,11 +89,32 @@ export class BankDetailsPage {
           text: 'Yes, Delete',
           handler: () => {
 
+            this.bankService.deleteBank(id)
+            .then(res =>{
+              this.helper.presentToast("Bank details has been deleted successfully");
+              this.initialize();
+            }).catch(e => console.log(e));
+
           }
         }
       ]
     });
     confirm.present();
   }
+
+  getItems(ev: any) {
+    this.bankService.retrieveBank().then(res => {
+      if (res) {
+        this.bankData = res;
+        const val = ev.target.value;
+        if (val && val.trim() != '') {
+          this.bankData = this.bankData.filter((item) => {
+            return (item.bank.toLowerCase().indexOf(val.toLowerCase()) > -1);
+          });
+        }
+      }
+    });
+  }
+
 
 }

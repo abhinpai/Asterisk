@@ -1,3 +1,4 @@
+import { BankDBServiceProvider } from './../services/bank-db.service';
 import { NgModule } from '@angular/core';
 import { IonicPageModule } from 'ionic-angular';
 import { AddBankPage } from './add-bank';
@@ -15,7 +16,8 @@ import { SystemModule } from '../../../Core/system.module';
     IonicPageModule.forChild(AddBankPage),
   ],
   providers:[
-    PhotoViewer
+    PhotoViewer,
+    BankDBServiceProvider
   ]
 })
 export class AddBankPageModule {}

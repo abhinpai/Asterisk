@@ -36,8 +36,15 @@ export class DatabaseServiceProvider {
                         console.log("Cards Table created ");
                     }).catch(error => console.log(error));
 
+                // Bank table
+                db.executeSql('CREATE TABLE IF NOT EXISTS banks(id INTEGER PRIMARY KEY AUTOINCREMENT, bank VARCHAR(100), bank_logo VARCHAR(100), ac_holder_name VARCHAR(60), ac_no VARCHAR(30), ifsc VARCHAR(25), nomine VARCHAR(60), phone VARCHAR(20), email VARCHAR(60), address VARCHAR(200), primary_no VARCHAR(20), secondary_no VARCHAR(20), fax VARCHAR(20), bank_email VARCHAR(60), documents VARCHAR(1000), created_at TIMESTAMP, updated_at TIMESTAMP)', {})
+                    .then(result => {
+                        console.log("Bank Table created ");
+                    }).catch(error => console.log(error));
+
 
             }).catch(error => console.log(error));
     }
 
 }
+
