@@ -136,10 +136,10 @@
       </button>
     </ion-item>
 
-    <ion-item text-center *ngIf="bankData.documents.length == 0" text-center>
+    <ion-item text-center *ngIf="bankData.documents.length == 0" (click)="presentActionSheet()">
       <div class="upload-media">
-       <ion-icon name="ios-cloud-upload-outline"></ion-icon>
-       <p>Add Document</p>
+        <ion-icon name="ios-cloud-upload-outline"></ion-icon>
+        <p>Add Document</p>
       </div>
     </ion-item>
 
@@ -151,7 +151,6 @@
         <img (click)="viewPhoto()" [src]="document_object" *ngIf="document_object" />
       </div>
     </ion-item>
-
 
   </ion-card>
 

@@ -8,7 +8,6 @@ import { AndroidPermissions } from '@ionic-native/android-permissions';
 import { Camera } from '@ionic-native/camera';
 import { ImagePicker } from '@ionic-native/image-picker';
 
-
 @Injectable()
 export class SystemService {
 
@@ -35,8 +34,8 @@ export class SystemService {
             sourceType: this.camera.PictureSourceType.CAMERA,
             quality: 75,
             targetWidth: 720,
-            targetHeight: 700,
-            allowEdit: true,
+            correctOrientation: true,
+            allowEdit: false,
             encodingType: this.camera.EncodingType.JPEG,
             MediaType: this.camera.MediaType.PICTURE,
         };
@@ -104,6 +103,8 @@ export class SystemService {
             },
                 err => console.log('Cannot check for permission'));
     }
+
+
 
 
     storeLocally(file_resource_url, callback, sourceType?) {
